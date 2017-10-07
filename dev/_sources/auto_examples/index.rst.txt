@@ -345,7 +345,7 @@ Examples related to the selection of balancing methods.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="In this example the impact of the SMOTE&#x27;s k_neighbors parameter is examined. In the plot you ca...">
+    <div class="sphx-glr-thumbcontainer" tooltip="In this example the impact of the SMOTE's k_neighbors parameter is examined. In the plot you ca...">
 
 .. only:: html
 
@@ -621,7 +621,7 @@ The implemented methods can be categorized into 2 groups: (i) fixed under-sampli
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="An illustration of the nearmiss 1 &amp; 2 &amp; 3 method.">
+    <div class="sphx-glr-thumbcontainer" tooltip="An illustration of the nearmiss 1 & 2 & 3 method.">
 
 .. only:: html
 
