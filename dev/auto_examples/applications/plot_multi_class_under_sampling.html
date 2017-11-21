@@ -212,9 +212,9 @@ not differ from the binary case.</p>
 
 <span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
 
-<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_iris</span>
-<span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">LinearSVC</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <a href="http://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_iris.html#sklearn.datasets.load_iris" title="View documentation for sklearn.datasets.load_iris"><span class="n">load_iris</span></a>
+<span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <a href="http://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html#sklearn.svm.LinearSVC" title="View documentation for sklearn.svm.LinearSVC"><span class="n">LinearSVC</span></a>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <a href="http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html#sklearn.model_selection.train_test_split" title="View documentation for sklearn.model_selection.train_test_split"><span class="n">train_test_split</span></a>
 
 <span class="kn">from</span> <span class="nn">imblearn.datasets</span> <span class="kn">import</span> <a href="../../generated/imblearn.datasets.make_imbalance.html#imblearn.datasets.make_imbalance" title="View documentation for imblearn.datasets.make_imbalance"><span class="n">make_imbalance</span></a>
 <span class="kn">from</span> <span class="nn">imblearn.under_sampling</span> <span class="kn">import</span> <a href="../../generated/imblearn.under_sampling.NearMiss.html#imblearn.under_sampling.NearMiss" title="View documentation for imblearn.under_sampling.NearMiss"><span class="n">NearMiss</span></a>
@@ -226,11 +226,11 @@ not differ from the binary case.</p>
 <span class="n">RANDOM_STATE</span> <span class="o">=</span> <span class="mi">42</span>
 
 <span class="c1"># Create a folder to fetch the dataset</span>
-<span class="n">iris</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
+<span class="n">iris</span> <span class="o">=</span> <a href="http://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_iris.html#sklearn.datasets.load_iris" title="View documentation for sklearn.datasets.load_iris"><span class="n">load_iris</span></a><span class="p">()</span>
 <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <a href="../../generated/imblearn.datasets.make_imbalance.html#imblearn.datasets.make_imbalance" title="View documentation for imblearn.datasets.make_imbalance"><span class="n">make_imbalance</span></a><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">iris</span><span class="o">.</span><span class="n">target</span><span class="p">,</span> <span class="n">ratio</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">50</span><span class="p">},</span>
                       <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <a href="http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html#sklearn.model_selection.train_test_split" title="View documentation for sklearn.model_selection.train_test_split"><span class="n">train_test_split</span></a><span class="p">(</span>
     <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">RANDOM_STATE</span><span class="p">)</span>
 
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Training target statistics: {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Counter</span><span class="p">(</span><span class="n">y_train</span><span class="p">)))</span>
@@ -238,14 +238,14 @@ not differ from the binary case.</p>
 
 <span class="c1"># Create a pipeline</span>
 <span class="n">pipeline</span> <span class="o">=</span> <a href="../../generated/imblearn.pipeline.make_pipeline.html#imblearn.pipeline.make_pipeline" title="View documentation for imblearn.pipeline.make_pipeline"><span class="n">make_pipeline</span></a><span class="p">(</span><a href="../../generated/imblearn.under_sampling.NearMiss.html#imblearn.under_sampling.NearMiss" title="View documentation for imblearn.under_sampling.NearMiss"><span class="n">NearMiss</span></a><span class="p">(</span><span class="n">version</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">RANDOM_STATE</span><span class="p">),</span>
-                         <span class="n">LinearSVC</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="n">RANDOM_STATE</span><span class="p">))</span>
+                         <a href="http://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html#sklearn.svm.LinearSVC" title="View documentation for sklearn.svm.LinearSVC"><span class="n">LinearSVC</span></a><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="n">RANDOM_STATE</span><span class="p">))</span>
 <span class="n">pipeline</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 
 <span class="c1"># Classify and report the results</span>
 <span class="k">print</span><span class="p">(</span><a href="../../generated/imblearn.metrics.classification_report_imbalanced.html#imblearn.metrics.classification_report_imbalanced" title="View documentation for imblearn.metrics.classification_report_imbalanced"><span class="n">classification_report_imbalanced</span></a><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)))</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the script:</strong> ( 0 minutes  0.023 seconds)</p>
+<p><strong>Total running time of the script:</strong> ( 0 minutes  0.016 seconds)</p>
 <div class="sphx-glr-footer docutils container">
 <div class="sphx-glr-download docutils container">
 <a class="reference download internal" href="../../_downloads/plot_multi_class_under_sampling.py" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_multi_class_under_sampling.py</span></code></a></div>
@@ -277,7 +277,7 @@ not differ from the binary case.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2016, G. Lemaitre, F. Nogueira, D. Oliveira, C. Aridas.
+        &copy; Copyright 2016 - 2017, G. Lemaitre, F. Nogueira, D. Oliveira, C. Aridas.
 
     </p>
   </div>
