@@ -110,7 +110,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../api.html#module-imblearn.metrics"><code class="docutils literal"><span class="pre">imblearn.metrics</span></code>: Metrics</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../api.html#module-imblearn.datasets"><code class="docutils literal"><span class="pre">imblearn.datasets</span></code>: Datasets</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="imblearn.datasets.make_imbalance.html"><code class="docutils literal"><span class="pre">imblearn.datasets</span></code>.make_imbalance</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal"><span class="pre">imblearn.datasets</span></code>.fetch_datasets</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal"><span class="pre">imblearn.datasets</span></code>.fetch_datasets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#examples-using-imblearn-datasets-fetch-datasets">Examples using <code class="docutils literal"><span class="pre">imblearn.datasets.fetch_datasets</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../api.html#module-imblearn.utils"><code class="docutils literal"><span class="pre">imblearn.utils</span></code>: Utilities</a></li>
@@ -198,7 +201,7 @@
 <h1><a class="reference internal" href="../api.html#module-imblearn.datasets" title="imblearn.datasets"><code class="xref py py-mod docutils literal"><span class="pre">imblearn.datasets</span></code></a>.fetch_datasets<a class="headerlink" href="#imblearn-datasets-fetch-datasets" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="imblearn.datasets.fetch_datasets">
-<code class="descclassname">imblearn.datasets.</code><code class="descname">fetch_datasets</code><span class="sig-paren">(</span><em>data_home=None</em>, <em>filter_data=None</em>, <em>download_if_missing=True</em>, <em>random_state=None</em>, <em>shuffle=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/87de5e4/imblearn/datasets/zenodo.py#L107"><span class="viewcode-link">[source]</span></a><a class="reference internal" href="../_modules/imblearn/datasets/zenodo.html#fetch_datasets"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.datasets.fetch_datasets" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">imblearn.datasets.</code><code class="descname">fetch_datasets</code><span class="sig-paren">(</span><em>data_home=None</em>, <em>filter_data=None</em>, <em>download_if_missing=True</em>, <em>random_state=None</em>, <em>shuffle=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/blob/e00e7f8/imblearn/datasets/zenodo.py#L107"><span class="viewcode-link">[source]</span></a><a class="reference internal" href="../_modules/imblearn/datasets/zenodo.html#fetch_datasets"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imblearn.datasets.fetch_datasets" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load the benchmark datasets from Zenodo, downloading it if necessary.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -473,7 +476,14 @@ Dissertation, Georgia State University, (2011).</td></tr>
 </table>
 </dd></dl>
 
-<div style='clear:both'></div></div>
+<div class="section" id="examples-using-imblearn-datasets-fetch-datasets">
+<h2>Examples using <code class="docutils literal"><span class="pre">imblearn.datasets.fetch_datasets</span></code><a class="headerlink" href="#examples-using-imblearn-datasets-fetch-datasets" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="This example shows the benefit of balancing the training set when using a bagging classifier. `..."><div class="figure" id="id3">
+<img alt="../_images/sphx_glr_plot_comparison_bagging_classifier_thumb.png" src="../_images/sphx_glr_plot_comparison_bagging_classifier_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/ensemble/plot_comparison_bagging_classifier.html#sphx-glr-auto-examples-ensemble-plot-comparison-bagging-classifier-py"><span class="std std-ref">Comparison of balanced and imbalanced bagging classifiers</span></a></span></p>
+</div>
+</div><div style='clear:both'></div></div>
+</div>
 
 
            </div>

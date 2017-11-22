@@ -201,23 +201,6 @@
 <span class="n">old_generate</span> <span class="o">=</span> <span class="n">_generate_bagging_indices</span>
 
 
-<span class="k">def</span> <span class="nf">_masked_bagging_indices</span><span class="p">(</span><span class="n">random_state</span><span class="p">,</span> <span class="n">bootstrap_features</span><span class="p">,</span>
-                            <span class="n">bootstrap_samples</span><span class="p">,</span> <span class="n">n_features</span><span class="p">,</span> <span class="n">n_samples</span><span class="p">,</span>
-                            <span class="n">max_features</span><span class="p">,</span> <span class="n">max_samples</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Monkey-patch to always get a mask instead of indices&quot;&quot;&quot;</span>
-    <span class="n">feature_indices</span><span class="p">,</span> <span class="n">sample_indices</span> <span class="o">=</span> <span class="n">old_generate</span><span class="p">(</span><span class="n">random_state</span><span class="p">,</span>
-                                                   <span class="n">bootstrap_features</span><span class="p">,</span>
-                                                   <span class="n">bootstrap_samples</span><span class="p">,</span>
-                                                   <span class="n">n_features</span><span class="p">,</span> <span class="n">n_samples</span><span class="p">,</span>
-                                                   <span class="n">max_features</span><span class="p">,</span> <span class="n">max_samples</span><span class="p">)</span>
-    <span class="n">sample_indices</span> <span class="o">=</span> <span class="n">indices_to_mask</span><span class="p">(</span><span class="n">sample_indices</span><span class="p">,</span> <span class="n">n_samples</span><span class="p">)</span>
-
-    <span class="k">return</span> <span class="n">feature_indices</span><span class="p">,</span> <span class="n">sample_indices</span>
-
-
-<span class="n">sklearn</span><span class="o">.</span><span class="n">ensemble</span><span class="o">.</span><span class="n">bagging</span><span class="o">.</span><span class="n">_generate_bagging_indices</span> <span class="o">=</span> <span class="n">_masked_bagging_indices</span>
-
-
 <div class="viewcode-block" id="BalancedBaggingClassifier"><a class="viewcode-back" href="../../../generated/imblearn.ensemble.BalancedBaggingClassifier.html#imblearn.ensemble.BalancedBaggingClassifier">[docs]</a><span class="k">class</span> <span class="nc">BalancedBaggingClassifier</span><span class="p">(</span><span class="n">BaggingClassifier</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;A Bagging classifier with additional balancing.</span>
 

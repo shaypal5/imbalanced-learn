@@ -263,9 +263,9 @@ classifier will favor the majority classes:</p>
 <span class="go">BaggingClassifier(...)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">y_pred</span> <span class="o">=</span> <span class="n">bc</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
-<span class="go">array([[   0,    0,   12],</span>
-<span class="go">       [   0,    0,   59],</span>
-<span class="go">       [   0,    0, 1179]])</span>
+<span class="go">array([[   9,    1,    2],</span>
+<span class="go">       [   0,   54,    5],</span>
+<span class="go">       [   1,    6, 1172]])</span>
 </pre></div>
 </div>
 <p><a class="reference internal" href="generated/imblearn.ensemble.BalancedBaggingClassifier.html#imblearn.ensemble.BalancedBaggingClassifier" title="imblearn.ensemble.BalancedBaggingClassifier"><code class="xref py py-class docutils literal"><span class="pre">BalancedBaggingClassifier</span></code></a> allows to resample each subset of data
@@ -285,8 +285,8 @@ takes the same parameters than the scikit-learn
 <span class="gp">&gt;&gt;&gt; </span><span class="n">y_pred</span> <span class="o">=</span> <span class="n">bbc</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
 <span class="go">array([[  12,    0,    0],</span>
-<span class="go">       [   0,   55,    4],</span>
-<span class="go">       [  68,   53, 1058]])</span>
+<span class="go">       [   1,   54,    4],</span>
+<span class="go">       [  49,   53, 1077]])</span>
 </pre></div>
 </div>
 <p>See
