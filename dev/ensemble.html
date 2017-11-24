@@ -280,13 +280,29 @@ takes the same parameters than the scikit-learn
 <span class="gp">... </span>                                <span class="n">ratio</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span>
 <span class="gp">... </span>                                <span class="n">replacement</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
 <span class="gp">... </span>                                <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">bbc</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> 
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bbc</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span> 
 <span class="go">BalancedBaggingClassifier(...)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">y_pred</span> <span class="o">=</span> <span class="n">bbc</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
-<span class="go">array([[  12,    0,    0],</span>
-<span class="go">       [   1,   54,    4],</span>
-<span class="go">       [  49,   53, 1077]])</span>
+<span class="go">array([[   9,    1,    2],</span>
+<span class="go">       [   0,   55,    4],</span>
+<span class="go">       [  42,   46, 1091]])</span>
+</pre></div>
+</div>
+<p>It also possible to turn a balanced bagging classifier into a balanced random
+forest using a decision tree classifier and setting the parameter
+<a href="#id1"><span class="problematic" id="id2">``</span></a>max_features=’auto’<a href="#id3"><span class="problematic" id="id4">`</span></a>. It allows to randomly select a subset of features for
+each tree:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">brf</span> <span class="o">=</span> <span class="n">BalancedBaggingClassifier</span><span class="p">(</span>
+<span class="gp">... </span>         <span class="n">base_estimator</span><span class="o">=</span><span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">max_features</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">),</span>
+<span class="gp">... </span>         <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">brf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span> 
+<span class="go">BalancedBaggingClassifier(...)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y_pred</span> <span class="o">=</span> <span class="n">brf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="go">array([[   9,    1,    2],</span>
+<span class="go">       [   0,   54,    5],</span>
+<span class="go">       [  31,   34, 1114]])</span>
 </pre></div>
 </div>
 <p>See
