@@ -88,6 +88,8 @@ An illustration of the easy ensemble method.
 .. only :: html
 
  .. container:: sphx-glr-footer
+    :class: sphx-glr-footer-example
+
 
 
   .. container:: sphx-glr-download

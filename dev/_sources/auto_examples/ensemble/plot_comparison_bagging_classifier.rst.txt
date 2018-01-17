@@ -205,13 +205,15 @@ Turning the balanced bagging classifier into a balanced random forest
      [  8  11]]
 
 
-**Total running time of the script:** ( 0 minutes  16.842 seconds)
+**Total running time of the script:** ( 0 minutes  16.943 seconds)
 
 
 
 .. only :: html
 
  .. container:: sphx-glr-footer
+    :class: sphx-glr-footer-example
+
 
 
   .. container:: sphx-glr-download

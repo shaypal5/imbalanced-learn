@@ -85,6 +85,8 @@ An example of the Pipeline object working with transformers and resamplers.
 .. only :: html
 
  .. container:: sphx-glr-footer
+    :class: sphx-glr-footer-example
+
 
 
   .. container:: sphx-glr-download
