@@ -248,9 +248,9 @@ for usage example.</p>
 </div>
 <div class="section" id="from-random-over-sampling-to-smote-and-adasyn">
 <span id="smote-adasyn"></span><h3>2.1.2. From random over-sampling to SMOTE and ADASYN<a class="headerlink" href="#from-random-over-sampling-to-smote-and-adasyn" title="Permalink to this headline">¶</a></h3>
-<p>Apart from the random sampling with replacement, there is two popular methods
-to over-sample minority classes: (i) Synthetic Minority Oversampling Technique
-(SMOTE) and (ii) Adaptive Synthetic (ADASYN) sampling method. These algorithm
+<p>Apart from the random sampling with replacement, there are two popular methods
+to over-sample minority classes: (i) the Synthetic Minority Oversampling Technique
+(SMOTE) and (ii) the Adaptive Synthetic (ADASYN) sampling method. These algorithms
 can be used in the same manner:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">imblearn.over_sampling</span> <span class="k">import</span> <span class="n">SMOTE</span><span class="p">,</span> <span class="n">ADASYN</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">X_resampled</span><span class="p">,</span> <span class="n">y_resampled</span> <span class="o">=</span> <span class="n">SMOTE</span><span class="p">()</span><span class="o">.</span><span class="n">fit_sample</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
