@@ -14,7 +14,7 @@ An illustration of the SMOTE + ENN method.
 
 
 .. image:: /auto_examples/combine/images/sphx_glr_plot_smote_enn_001.png
-    :align: center
+    :class: sphx-glr-single-img
 
 
 
@@ -82,7 +82,7 @@ An illustration of the SMOTE + ENN method.
     plt.tight_layout(pad=3)
     plt.show()
 
-**Total running time of the script:** ( 0 minutes  0.203 seconds)
+**Total running time of the script:** ( 0 minutes  0.197 seconds)
 
 
 

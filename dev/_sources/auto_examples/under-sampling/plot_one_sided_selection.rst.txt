@@ -14,7 +14,7 @@ An illustration of the one-sided selection method.
 
 
 .. image:: /auto_examples/under-sampling/images/sphx_glr_plot_one_sided_selection_001.png
-    :align: center
+    :class: sphx-glr-single-img
 
 
 
@@ -81,7 +81,7 @@ An illustration of the one-sided selection method.
     plt.tight_layout()
     plt.show()
 
-**Total running time of the script:** ( 0 minutes  0.126 seconds)
+**Total running time of the script:** ( 0 minutes  0.118 seconds)
 
 
 

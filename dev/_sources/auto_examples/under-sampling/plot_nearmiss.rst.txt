@@ -14,7 +14,7 @@ An illustration of the nearmiss 1 & 2 & 3 method.
 
 
 .. image:: /auto_examples/under-sampling/images/sphx_glr_plot_nearmiss_001.png
-    :align: center
+    :class: sphx-glr-single-img
 
 
 
@@ -99,7 +99,7 @@ An illustration of the nearmiss 1 & 2 & 3 method.
     plt.tight_layout(pad=3)
     plt.show()
 
-**Total running time of the script:** ( 0 minutes  0.341 seconds)
+**Total running time of the script:** ( 0 minutes  0.321 seconds)
 
 
 

@@ -14,7 +14,7 @@ An illustration of the random over-sampling method.
 
 
 .. image:: /auto_examples/over-sampling/images/sphx_glr_plot_random_over_sampling_001.png
-    :align: center
+    :class: sphx-glr-single-img
 
 
 
@@ -82,7 +82,7 @@ An illustration of the random over-sampling method.
     plt.tight_layout(pad=3)
     plt.show()
 
-**Total running time of the script:** ( 0 minutes  0.199 seconds)
+**Total running time of the script:** ( 0 minutes  0.190 seconds)
 
 
 

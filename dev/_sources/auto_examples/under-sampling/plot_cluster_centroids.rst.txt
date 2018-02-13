@@ -14,7 +14,7 @@ An illustration of the cluster centroids method.
 
 
 .. image:: /auto_examples/under-sampling/images/sphx_glr_plot_cluster_centroids_001.png
-    :align: center
+    :class: sphx-glr-single-img
 
 
 
@@ -105,7 +105,7 @@ An illustration of the cluster centroids method.
     plt.tight_layout(pad=3)
     plt.show()
 
-**Total running time of the script:** ( 0 minutes  0.348 seconds)
+**Total running time of the script:** ( 0 minutes  0.328 seconds)
 
 
 

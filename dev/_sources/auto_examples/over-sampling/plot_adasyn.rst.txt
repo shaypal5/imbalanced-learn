@@ -15,7 +15,7 @@ Learning ADASYN method.
 
 
 .. image:: /auto_examples/over-sampling/images/sphx_glr_plot_adasyn_001.png
-    :align: center
+    :class: sphx-glr-single-img
 
 
 
@@ -83,7 +83,7 @@ Learning ADASYN method.
     plt.tight_layout(pad=3)
     plt.show()
 
-**Total running time of the script:** ( 0 minutes  0.203 seconds)
+**Total running time of the script:** ( 0 minutes  0.194 seconds)
 
 
 

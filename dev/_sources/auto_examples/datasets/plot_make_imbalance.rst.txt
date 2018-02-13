@@ -14,7 +14,7 @@ An illustration of the make_imbalance function
 
 
 .. image:: /auto_examples/datasets/images/sphx_glr_plot_make_imbalance_001.png
-    :align: center
+    :class: sphx-glr-single-img
 
 
 
@@ -82,7 +82,7 @@ An illustration of the make_imbalance function
     plt.tight_layout()
     plt.show()
 
-**Total running time of the script:** ( 0 minutes  0.381 seconds)
+**Total running time of the script:** ( 0 minutes  0.356 seconds)
 
 
 

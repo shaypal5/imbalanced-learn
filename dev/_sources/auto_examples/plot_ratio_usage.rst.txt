@@ -88,12 +88,12 @@ samples desired in this class.
     *
 
       .. image:: /auto_examples/images/sphx_glr_plot_ratio_usage_001.png
-            :scale: 47
+            :class: sphx-glr-multi-img
 
     *
 
       .. image:: /auto_examples/images/sphx_glr_plot_ratio_usage_002.png
-            :scale: 47
+            :class: sphx-glr-multi-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -137,7 +137,7 @@ multiplier to define the number of samples per class.
 
 
 .. image:: /auto_examples/images/sphx_glr_plot_ratio_usage_003.png
-    :align: center
+    :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -145,7 +145,7 @@ multiplier to define the number of samples per class.
  Out::
 
     Information of the iris data set after making it imbalanced using a callable: 
-     ratio=<function ratio_multiplier at 0x2abe4175dd90> 
+     ratio=<function ratio_multiplier at 0x2b5cde310d90> 
      y: Counter({2: 47, 1: 35, 0: 25})
 
 
@@ -179,7 +179,7 @@ number of sample with the majority or minority class.
 
 
 .. image:: /auto_examples/images/sphx_glr_plot_ratio_usage_004.png
-    :align: center
+    :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -231,12 +231,12 @@ mentioned.
     *
 
       .. image:: /auto_examples/images/sphx_glr_plot_ratio_usage_005.png
-            :scale: 47
+            :class: sphx-glr-multi-img
 
     *
 
       .. image:: /auto_examples/images/sphx_glr_plot_ratio_usage_006.png
-            :scale: 47
+            :class: sphx-glr-multi-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -251,7 +251,7 @@ mentioned.
      y: Counter({2: 35, 1: 30, 0: 25})
 
 
-**Total running time of the script:** ( 0 minutes  0.276 seconds)
+**Total running time of the script:** ( 0 minutes  0.261 seconds)
 
 
 

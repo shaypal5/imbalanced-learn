@@ -14,7 +14,7 @@ An illustration of the ENN, RENN, and All-KNN method.
 
 
 .. image:: /auto_examples/under-sampling/images/sphx_glr_plot_enn_renn_allknn_001.png
-    :align: center
+    :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -132,7 +132,7 @@ An illustration of the ENN, RENN, and All-KNN method.
     plt.tight_layout(pad=3)
     plt.show()
 
-**Total running time of the script:** ( 0 minutes  0.352 seconds)
+**Total running time of the script:** ( 0 minutes  0.332 seconds)
 
 
 
