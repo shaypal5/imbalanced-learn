@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>6. Metrics &mdash; imbalanced-learn 0.4.0.dev0 documentation</title>
+  <title>7. Metrics &mdash; imbalanced-learn 0.4.0.dev0 documentation</title>
   
 
   
@@ -41,8 +41,8 @@
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="imbalanced-learn 0.4.0.dev0 documentation" href="index.html"/>
         <link rel="up" title="User Guide" href="user_guide.html"/>
-        <link rel="next" title="7. Dataset loading utilities" href="datasets/index.html"/>
-        <link rel="prev" title="5. Ensemble of samplers" href="ensemble.html"/> 
+        <link rel="next" title="8. Dataset loading utilities" href="datasets/index.html"/>
+        <link rel="prev" title="6. Miscellaneous samplers" href="miscellaneous.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -107,13 +107,14 @@
 <li class="toctree-l2"><a class="reference internal" href="under_sampling.html">3. Under-sampling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="combine.html">4. Combination of over- and under-sampling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble.html">5. Ensemble of samplers</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">6. Metrics</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#sensitivity-and-specificity-metrics">6.1. Sensitivity and specificity metrics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#additional-metrics-specific-to-imbalanced-datasets">6.2. Additional metrics specific to imbalanced datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="miscellaneous.html">6. Miscellaneous samplers</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">7. Metrics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sensitivity-and-specificity-metrics">7.1. Sensitivity and specificity metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#additional-metrics-specific-to-imbalanced-datasets">7.2. Additional metrics specific to imbalanced datasets</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="datasets/index.html">7. Dataset loading utilities</a></li>
-<li class="toctree-l2"><a class="reference internal" href="developers_utils.html">8. Utilities for Developers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/index.html">8. Dataset loading utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="developers_utils.html">9. Utilities for Developers</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="api.html">imbalanced-learn API</a></li>
@@ -176,7 +177,7 @@
         
           <li><a href="user_guide.html">User Guide</a> &raquo;</li>
         
-      <li>6. Metrics</li>
+      <li>7. Metrics</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -196,14 +197,14 @@
            <div itemprop="articleBody">
             
   <div class="section" id="metrics">
-<span id="id1"></span><h1>6. Metrics<a class="headerlink" href="#metrics" title="Permalink to this headline">¶</a></h1>
+<span id="id1"></span><h1>7. Metrics<a class="headerlink" href="#metrics" title="Permalink to this headline">¶</a></h1>
 <p>Currently, scikit-learn only offers the
 <code class="docutils literal"><span class="pre">sklearn.metrics.balanced_accuracy_score</span></code> (in 0.20) as metric to deal with
 imbalanced datasets. The module <a class="reference internal" href="api.html#module-imblearn.metrics" title="imblearn.metrics"><code class="xref py py-mod docutils literal"><span class="pre">imblearn.metrics</span></code></a> offers a couple of
 other metrics which are used in the literature to evaluate the quality of
 classifiers.</p>
 <div class="section" id="sensitivity-and-specificity-metrics">
-<span id="sensitivity-specificity"></span><h2>6.1. Sensitivity and specificity metrics<a class="headerlink" href="#sensitivity-and-specificity-metrics" title="Permalink to this headline">¶</a></h2>
+<span id="sensitivity-specificity"></span><h2>7.1. Sensitivity and specificity metrics<a class="headerlink" href="#sensitivity-and-specificity-metrics" title="Permalink to this headline">¶</a></h2>
 <p>Sensitivity and specificity are metrics which are well known in medical
 imaging. Sensitivity (also called true positive rate or recall) is the
 proportion of the positive samples which is well classified while specificity
@@ -217,7 +218,7 @@ are implemented in scikit-learn. <a class="reference internal" href="generated/i
 use those metrics.</p>
 </div>
 <div class="section" id="additional-metrics-specific-to-imbalanced-datasets">
-<span id="imbalanced-metrics"></span><h2>6.2. Additional metrics specific to imbalanced datasets<a class="headerlink" href="#additional-metrics-specific-to-imbalanced-datasets" title="Permalink to this headline">¶</a></h2>
+<span id="imbalanced-metrics"></span><h2>7.2. Additional metrics specific to imbalanced datasets<a class="headerlink" href="#additional-metrics-specific-to-imbalanced-datasets" title="Permalink to this headline">¶</a></h2>
 <p>The <a class="reference internal" href="generated/imblearn.metrics.geometric_mean_score.html#imblearn.metrics.geometric_mean_score" title="imblearn.metrics.geometric_mean_score"><code class="xref py py-func docutils literal"><span class="pre">geometric_mean_score</span></code></a> is the root of the product of class-wise
 sensitivity. This measure tries to maximize the accuracy on each of the classes
 while keeping these accuracies balanced.</p>
@@ -236,10 +237,10 @@ importance to a specific class using the parameter <code class="docutils literal
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="datasets/index.html" class="btn btn-neutral float-right" title="7. Dataset loading utilities" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="datasets/index.html" class="btn btn-neutral float-right" title="8. Dataset loading utilities" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="ensemble.html" class="btn btn-neutral" title="5. Ensemble of samplers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="miscellaneous.html" class="btn btn-neutral" title="6. Miscellaneous samplers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

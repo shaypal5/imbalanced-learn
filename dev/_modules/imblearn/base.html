@@ -339,6 +339,110 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">ratio_</span> <span class="o">=</span> <span class="n">check_ratio</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ratio</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sampling_type</span><span class="p">)</span>
 
         <span class="k">return</span> <span class="bp">self</span>
+
+
+<span class="k">def</span> <span class="nf">_identity</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span>
+
+
+<div class="viewcode-block" id="FunctionSampler"><a class="viewcode-back" href="../../generated/imblearn.FunctionSampler.html#imblearn.FunctionSampler">[docs]</a><span class="k">class</span> <span class="nc">FunctionSampler</span><span class="p">(</span><span class="n">SamplerMixin</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Construct a sampler from calling an arbitrary callable.</span>
+
+<span class="sd">    Read more in the :ref:`User Guide &lt;function_sampler&gt;`.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    func : callable or None,</span>
+<span class="sd">        The callable to use for the transformation. This will be passed the</span>
+<span class="sd">        same arguments as transform, with args and kwargs forwarded. If func is</span>
+<span class="sd">        None, then func will be the identity function.</span>
+
+<span class="sd">    accept_sparse : bool, optional (default=True)</span>
+<span class="sd">        Whether sparse input are supported. By default, sparse inputs are</span>
+<span class="sd">        supported.</span>
+
+<span class="sd">    kw_args : dict, optional (default=None)</span>
+<span class="sd">        The keyword argument expected by ``func``.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+
+<span class="sd">    See</span>
+<span class="sd">    :ref:`sphx_glr_auto_examples_plot_outlier_rejections.py`</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import numpy as np</span>
+<span class="sd">    &gt;&gt;&gt; from sklearn.datasets import make_classification</span>
+<span class="sd">    &gt;&gt;&gt; from imblearn import FunctionSampler</span>
+<span class="sd">    &gt;&gt;&gt; X, y = make_classification(n_classes=2, class_sep=2,</span>
+<span class="sd">    ... weights=[0.1, 0.9], n_informative=3, n_redundant=1, flip_y=0,</span>
+<span class="sd">    ... n_features=20, n_clusters_per_class=1, n_samples=1000, random_state=10)</span>
+
+<span class="sd">    We can create to select only the first ten samples for instance.</span>
+
+<span class="sd">    &gt;&gt;&gt; def func(X, y):</span>
+<span class="sd">    ...   return X[:10], y[:10]</span>
+<span class="sd">    &gt;&gt;&gt; sampler = FunctionSampler(func=func)</span>
+<span class="sd">    &gt;&gt;&gt; X_res, y_res = sampler.fit_sample(X, y)</span>
+<span class="sd">    &gt;&gt;&gt; np.all(X_res == X[:10])</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; np.all(y_res == y[:10])</span>
+<span class="sd">    True</span>
+
+<span class="sd">    We can also create a specific function which take some arguments.</span>
+
+<span class="sd">    &gt;&gt;&gt; from collections import Counter</span>
+<span class="sd">    &gt;&gt;&gt; from imblearn.under_sampling import RandomUnderSampler</span>
+<span class="sd">    &gt;&gt;&gt; def func(X, y, ratio, random_state):</span>
+<span class="sd">    ...   return RandomUnderSampler(ratio=ratio,</span>
+<span class="sd">    ...                             random_state=random_state).fit_sample(X, y)</span>
+<span class="sd">    &gt;&gt;&gt; sampler = FunctionSampler(func=func,</span>
+<span class="sd">    ...                           kw_args={&#39;ratio&#39;: &#39;auto&#39;, &#39;random_state&#39;: 0})</span>
+<span class="sd">    &gt;&gt;&gt; X_res, y_res = sampler.fit_sample(X, y)</span>
+<span class="sd">    &gt;&gt;&gt; print(&#39;Resampled dataset shape {}&#39;.format(</span>
+<span class="sd">    ...     sorted(Counter(y_res).items())))</span>
+<span class="sd">    Resampled dataset shape [(0, 100), (1, 100)]</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="FunctionSampler.__init__"><a class="viewcode-back" href="../../generated/imblearn.FunctionSampler.html#imblearn.FunctionSampler.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">accept_sparse</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">kw_args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">func</span> <span class="o">=</span> <span class="n">func</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">accept_sparse</span> <span class="o">=</span> <span class="n">accept_sparse</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">kw_args</span> <span class="o">=</span> <span class="n">kw_args</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">_check_X_y</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">accept_sparse</span><span class="p">:</span>
+            <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">check_X_y</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">accept_sparse</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;csr&#39;</span><span class="p">,</span> <span class="s1">&#39;csc&#39;</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">check_X_y</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">accept_sparse</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">check_target_type</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span>
+
+    <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_check_X_y</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">X_hash_</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y_hash_</span> <span class="o">=</span> <span class="n">hash_X_y</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+        <span class="c1"># when using a sampler, ratio_ is supposed to exist after fit</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ratio_</span> <span class="o">=</span> <span class="s1">&#39;is_fitted&#39;</span>
+
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="nf">_sample</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">func</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">kw_args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_check_X_y</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+        <span class="n">check_is_fitted</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;ratio_&#39;</span><span class="p">)</span>
+        <span class="n">X_hash</span><span class="p">,</span> <span class="n">y_hash</span> <span class="o">=</span> <span class="n">hash_X_y</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">X_hash_</span> <span class="o">!=</span> <span class="n">X_hash</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">y_hash_</span> <span class="o">!=</span> <span class="n">y_hash</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;X and y need to be same array earlier fitted.&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">func</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">func</span> <span class="o">=</span> <span class="n">_identity</span>
+
+        <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="o">**</span><span class="p">(</span><span class="n">kw_args</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">kw_args</span> <span class="k">else</span> <span class="p">{}))</span>
+
+    <span class="k">def</span> <span class="nf">sample</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sample</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">func</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">func</span><span class="p">,</span> <span class="n">kw_args</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">kw_args</span><span class="p">)</span></div>
 </pre></div>
 
            </div>

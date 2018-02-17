@@ -41,7 +41,7 @@
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="imbalanced-learn 0.4.0.dev0 documentation" href="../index.html"/>
         <link rel="up" title="General examples" href="index.html"/>
-        <link rel="next" title="Multiclass classification with under-sampling" href="applications/plot_multi_class_under_sampling.html"/>
+        <link rel="next" title="Customized sampler to implement an outlier rejections estimator" href="plot_outlier_rejections.html"/>
         <link rel="prev" title="General examples" href="index.html"/> 
 
   
@@ -112,6 +112,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#using-ratio-in-resampling-algorithm">Using <code class="docutils literal"><span class="pre">ratio</span></code> in resampling algorithm</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="plot_outlier_rejections.html">Customized sampler to implement an outlier rejections estimator</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="index.html#examples-based-on-real-world-datasets">Examples based on real world datasets</a></li>
@@ -279,7 +280,7 @@ multiplier to define the number of samples per class.</p>
 <img alt="../_images/sphx_glr_plot_ratio_usage_003.png" class="sphx-glr-single-img" src="../_images/sphx_glr_plot_ratio_usage_003.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-default"><div class="highlight"><pre><span></span><span class="n">Information</span> <span class="n">of</span> <span class="n">the</span> <span class="n">iris</span> <span class="n">data</span> <span class="nb">set</span> <span class="n">after</span> <span class="n">making</span> <span class="n">it</span> <span class="n">imbalanced</span> <span class="n">using</span> <span class="n">a</span> <span class="n">callable</span><span class="p">:</span>
- <span class="n">ratio</span><span class="o">=&lt;</span><span class="n">function</span> <span class="n">ratio_multiplier</span> <span class="n">at</span> <span class="mh">0x2b5cde310d90</span><span class="o">&gt;</span>
+ <span class="n">ratio</span><span class="o">=&lt;</span><span class="n">function</span> <span class="n">ratio_multiplier</span> <span class="n">at</span> <span class="mh">0x2af985b9ad90</span><span class="o">&gt;</span>
  <span class="n">y</span><span class="p">:</span> <span class="n">Counter</span><span class="p">({</span><span class="mi">2</span><span class="p">:</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span> <span class="mi">25</span><span class="p">})</span>
 </pre></div>
 </div>
@@ -352,7 +353,7 @@ mentioned.</p>
  <span class="n">y</span><span class="p">:</span> <span class="n">Counter</span><span class="p">({</span><span class="mi">2</span><span class="p">:</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span> <span class="mi">25</span><span class="p">})</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the script:</strong> ( 0 minutes  0.261 seconds)</p>
+<p><strong>Total running time of the script:</strong> ( 0 minutes  0.296 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container">
 <div class="sphx-glr-download docutils container">
 <a class="reference download internal" href="../_downloads/plot_ratio_usage.py" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_ratio_usage.py</span></code></a></div>
@@ -373,7 +374,7 @@ mentioned.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="applications/plot_multi_class_under_sampling.html" class="btn btn-neutral float-right" title="Multiclass classification with under-sampling" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="plot_outlier_rejections.html" class="btn btn-neutral float-right" title="Customized sampler to implement an outlier rejections estimator" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral" title="General examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
