@@ -107,9 +107,9 @@
 <p class="caption"><span class="caption-text">Tutorial - Examples</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">General examples</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Usage of the <code class="docutils literal"><span class="pre">ratio</span></code> parameter for the different algorithm</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Usage of the <code class="docutils literal notranslate"><span class="pre">ratio</span></code> parameter for the different algorithm</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#creation-of-an-imbalanced-data-set-from-a-balanced-data-set">Creation of an imbalanced data set from a balanced data set</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#using-ratio-in-resampling-algorithm">Using <code class="docutils literal"><span class="pre">ratio</span></code> in resampling algorithm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-ratio-in-resampling-algorithm">Using <code class="docutils literal notranslate"><span class="pre">ratio</span></code> in resampling algorithm</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="plot_outlier_rejections.html">Customized sampler to implement an outlier rejections estimator</a></li>
@@ -170,7 +170,7 @@
         
           <li><a href="index.html">General examples</a> &raquo;</li>
         
-      <li>Usage of the <code class="docutils literal"><span class="pre">ratio</span></code> parameter for the different algorithm</li>
+      <li>Usage of the <code class="docutils literal notranslate"><span class="pre">ratio</span></code> parameter for the different algorithm</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -190,11 +190,11 @@
            <div itemprop="articleBody">
             
   <div class="section" id="usage-of-the-ratio-parameter-for-the-different-algorithm">
-<span id="sphx-glr-auto-examples-plot-ratio-usage-py"></span><h1>Usage of the <code class="docutils literal"><span class="pre">ratio</span></code> parameter for the different algorithm<a class="headerlink" href="#usage-of-the-ratio-parameter-for-the-different-algorithm" title="Permalink to this headline">¶</a></h1>
-<p>This example shows how to use the <code class="docutils literal"><span class="pre">ratio</span></code> parameter in the different
-examples. It illustrated the use of passing <code class="docutils literal"><span class="pre">ratio</span></code> as a <code class="docutils literal"><span class="pre">str</span></code>, <code class="docutils literal"><span class="pre">dict</span></code> or
+<span id="sphx-glr-auto-examples-plot-ratio-usage-py"></span><h1>Usage of the <code class="docutils literal notranslate"><span class="pre">ratio</span></code> parameter for the different algorithm<a class="headerlink" href="#usage-of-the-ratio-parameter-for-the-different-algorithm" title="Permalink to this headline">¶</a></h1>
+<p>This example shows how to use the <code class="docutils literal notranslate"><span class="pre">ratio</span></code> parameter in the different
+examples. It illustrated the use of passing <code class="docutils literal notranslate"><span class="pre">ratio</span></code> as a <code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">dict</span></code> or
 a callable.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># Authors: Guillaume Lemaitre &lt;g.lemaitre58@gmail.com&gt;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Authors: Guillaume Lemaitre &lt;g.lemaitre58@gmail.com&gt;</span>
 <span class="c1"># License: MIT</span>
 
 <span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
@@ -223,12 +223,12 @@ a callable.</p>
 </div>
 <div class="section" id="creation-of-an-imbalanced-data-set-from-a-balanced-data-set">
 <h2>Creation of an imbalanced data set from a balanced data set<a class="headerlink" href="#creation-of-an-imbalanced-data-set-from-a-balanced-data-set" title="Permalink to this headline">¶</a></h2>
-<p>We will show how to use the parameter <code class="docutils literal"><span class="pre">ratio</span></code> when dealing with the
-<code class="docutils literal"><span class="pre">make_imbalance</span></code> function. For this function, this parameter accepts both
+<p>We will show how to use the parameter <code class="docutils literal notranslate"><span class="pre">ratio</span></code> when dealing with the
+<code class="docutils literal notranslate"><span class="pre">make_imbalance</span></code> function. For this function, this parameter accepts both
 dictionary and callable. When using a dictionary, each key will correspond to
 the class of interest and the corresponding value will be the number of
 samples desired in this class.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">iris</span> <span class="o">=</span> <a href="http://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_iris.html#sklearn.datasets.load_iris" title="View documentation for sklearn.datasets.load_iris"><span class="n">load_iris</span></a><span class="p">()</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">iris</span> <span class="o">=</span> <a href="http://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_iris.html#sklearn.datasets.load_iris" title="View documentation for sklearn.datasets.load_iris"><span class="n">load_iris</span></a><span class="p">()</span>
 
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Information of the original iris data set: </span><span class="se">\n</span><span class="s1"> {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
     <span class="n">Counter</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">target</span><span class="p">)))</span>
@@ -250,7 +250,7 @@ samples desired in this class.</p>
 </li>
 </ul>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-default"><div class="highlight"><pre><span></span><span class="n">Information</span> <span class="n">of</span> <span class="n">the</span> <span class="n">original</span> <span class="n">iris</span> <span class="n">data</span> <span class="nb">set</span><span class="p">:</span>
+<div class="sphx-glr-script-out highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Information</span> <span class="n">of</span> <span class="n">the</span> <span class="n">original</span> <span class="n">iris</span> <span class="n">data</span> <span class="nb">set</span><span class="p">:</span>
  <span class="n">Counter</span><span class="p">({</span><span class="mi">0</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">50</span><span class="p">})</span>
 <span class="n">Information</span> <span class="n">of</span> <span class="n">the</span> <span class="n">iris</span> <span class="n">data</span> <span class="nb">set</span> <span class="n">after</span> <span class="n">making</span> <span class="n">it</span> <span class="n">imbalanced</span> <span class="n">using</span> <span class="n">a</span> <span class="nb">dict</span><span class="p">:</span>
  <span class="n">ratio</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">30</span><span class="p">}</span>
@@ -261,7 +261,7 @@ samples desired in this class.</p>
 determine the number of samples by class and you can define your own callable
 as follow. In this case we will define a function which will use a float
 multiplier to define the number of samples per class.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ratio_multiplier</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ratio_multiplier</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
     <span class="n">multiplier</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mf">0.95</span><span class="p">}</span>
     <span class="n">target_stats</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">target_stats</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
@@ -279,24 +279,24 @@ multiplier to define the number of samples per class.</p>
 </div>
 <img alt="../_images/sphx_glr_plot_ratio_usage_003.png" class="sphx-glr-single-img" src="../_images/sphx_glr_plot_ratio_usage_003.png" />
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-default"><div class="highlight"><pre><span></span><span class="n">Information</span> <span class="n">of</span> <span class="n">the</span> <span class="n">iris</span> <span class="n">data</span> <span class="nb">set</span> <span class="n">after</span> <span class="n">making</span> <span class="n">it</span> <span class="n">imbalanced</span> <span class="n">using</span> <span class="n">a</span> <span class="n">callable</span><span class="p">:</span>
- <span class="n">ratio</span><span class="o">=&lt;</span><span class="n">function</span> <span class="n">ratio_multiplier</span> <span class="n">at</span> <span class="mh">0x2af985b9ad90</span><span class="o">&gt;</span>
+<div class="sphx-glr-script-out highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Information</span> <span class="n">of</span> <span class="n">the</span> <span class="n">iris</span> <span class="n">data</span> <span class="nb">set</span> <span class="n">after</span> <span class="n">making</span> <span class="n">it</span> <span class="n">imbalanced</span> <span class="n">using</span> <span class="n">a</span> <span class="n">callable</span><span class="p">:</span>
+ <span class="n">ratio</span><span class="o">=&lt;</span><span class="n">function</span> <span class="n">ratio_multiplier</span> <span class="n">at</span> <span class="mh">0x2b175060b7b8</span><span class="o">&gt;</span>
  <span class="n">y</span><span class="p">:</span> <span class="n">Counter</span><span class="p">({</span><span class="mi">2</span><span class="p">:</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span> <span class="mi">25</span><span class="p">})</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="using-ratio-in-resampling-algorithm">
-<h2>Using <code class="docutils literal"><span class="pre">ratio</span></code> in resampling algorithm<a class="headerlink" href="#using-ratio-in-resampling-algorithm" title="Permalink to this headline">¶</a></h2>
-<p>In all sampling algorithms, <code class="docutils literal"><span class="pre">ratio</span></code> can be used as illustrated earlier. In
+<h2>Using <code class="docutils literal notranslate"><span class="pre">ratio</span></code> in resampling algorithm<a class="headerlink" href="#using-ratio-in-resampling-algorithm" title="Permalink to this headline">¶</a></h2>
+<p>In all sampling algorithms, <code class="docutils literal notranslate"><span class="pre">ratio</span></code> can be used as illustrated earlier. In
 addition, some predefined functions are available and can be executed using a
-<code class="docutils literal"><span class="pre">str</span></code> with the following choices: (i) <code class="docutils literal"><span class="pre">'minority'</span></code>: resample the minority
-class; (ii) <code class="docutils literal"><span class="pre">'majority'</span></code>: resample the majority class, (iii) <code class="docutils literal"><span class="pre">'not</span>
+<code class="docutils literal notranslate"><span class="pre">str</span></code> with the following choices: (i) <code class="docutils literal notranslate"><span class="pre">'minority'</span></code>: resample the minority
+class; (ii) <code class="docutils literal notranslate"><span class="pre">'majority'</span></code>: resample the majority class, (iii) <code class="docutils literal notranslate"><span class="pre">'not</span>
 <span class="pre">minority'</span></code>: resample all classes apart of the minority class, (iv)
-<code class="docutils literal"><span class="pre">'all'</span></code>: resample all classes, and (v) <code class="docutils literal"><span class="pre">'auto'</span></code>: correspond to ‘all’ with
+<code class="docutils literal notranslate"><span class="pre">'all'</span></code>: resample all classes, and (v) <code class="docutils literal notranslate"><span class="pre">'auto'</span></code>: correspond to ‘all’ with
 for over-sampling methods and ‘not minority’ for under-sampling methods. The
 classes targeted will be over-sampled or under-sampled to achieve an equal
 number of sample with the majority or minority class.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">ratio</span> <span class="o">=</span> <span class="s1">&#39;auto&#39;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ratio</span> <span class="o">=</span> <span class="s1">&#39;auto&#39;</span>
 <span class="n">X_res</span><span class="p">,</span> <span class="n">y_res</span> <span class="o">=</span> <a href="../generated/imblearn.under_sampling.RandomUnderSampler.html#imblearn.under_sampling.RandomUnderSampler" title="View documentation for imblearn.under_sampling.RandomUnderSampler"><span class="n">RandomUnderSampler</span></a><span class="p">(</span><span class="n">ratio</span><span class="o">=</span><span class="n">ratio</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">fit_sample</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Information of the iris data set after balancing using &quot;auto&quot;&#39;</span>
@@ -306,14 +306,14 @@ number of sample with the majority or minority class.</p>
 </div>
 <img alt="../_images/sphx_glr_plot_ratio_usage_004.png" class="sphx-glr-single-img" src="../_images/sphx_glr_plot_ratio_usage_004.png" />
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-default"><div class="highlight"><pre><span></span><span class="n">Information</span> <span class="n">of</span> <span class="n">the</span> <span class="n">iris</span> <span class="n">data</span> <span class="nb">set</span> <span class="n">after</span> <span class="n">balancing</span> <span class="n">using</span> <span class="s2">&quot;auto&quot;</span> <span class="n">mode</span><span class="p">:</span>
+<div class="sphx-glr-script-out highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Information</span> <span class="n">of</span> <span class="n">the</span> <span class="n">iris</span> <span class="n">data</span> <span class="nb">set</span> <span class="n">after</span> <span class="n">balancing</span> <span class="n">using</span> <span class="s2">&quot;auto&quot;</span> <span class="n">mode</span><span class="p">:</span>
  <span class="n">ratio</span><span class="o">=</span><span class="n">auto</span>
  <span class="n">y</span><span class="p">:</span> <span class="n">Counter</span><span class="p">({</span><span class="mi">0</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">25</span><span class="p">})</span>
 </pre></div>
 </div>
 <p>However, you can use the dictionary or the callable options as previously
 mentioned.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">ratio</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">35</span><span class="p">}</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ratio</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">35</span><span class="p">}</span>
 <span class="n">X_res</span><span class="p">,</span> <span class="n">y_res</span> <span class="o">=</span> <a href="../generated/imblearn.under_sampling.RandomUnderSampler.html#imblearn.under_sampling.RandomUnderSampler" title="View documentation for imblearn.under_sampling.RandomUnderSampler"><span class="n">RandomUnderSampler</span></a><span class="p">(</span><span class="n">ratio</span><span class="o">=</span><span class="n">ratio</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">fit_sample</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Information of the iris data set after balancing using a dict&#39;</span>
@@ -345,7 +345,7 @@ mentioned.</p>
 </li>
 </ul>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-default"><div class="highlight"><pre><span></span><span class="n">Information</span> <span class="n">of</span> <span class="n">the</span> <span class="n">iris</span> <span class="n">data</span> <span class="nb">set</span> <span class="n">after</span> <span class="n">balancing</span> <span class="n">using</span> <span class="n">a</span> <span class="nb">dict</span> <span class="n">mode</span><span class="p">:</span>
+<div class="sphx-glr-script-out highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Information</span> <span class="n">of</span> <span class="n">the</span> <span class="n">iris</span> <span class="n">data</span> <span class="nb">set</span> <span class="n">after</span> <span class="n">balancing</span> <span class="n">using</span> <span class="n">a</span> <span class="nb">dict</span> <span class="n">mode</span><span class="p">:</span>
  <span class="n">ratio</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">35</span><span class="p">}</span>
  <span class="n">y</span><span class="p">:</span> <span class="n">Counter</span><span class="p">({</span><span class="mi">2</span><span class="p">:</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span> <span class="mi">25</span><span class="p">})</span>
 <span class="n">Information</span> <span class="n">of</span> <span class="n">the</span> <span class="n">iris</span> <span class="n">data</span> <span class="nb">set</span> <span class="n">after</span> <span class="n">balancing</span> <span class="n">using</span> <span class="n">a</span> <span class="n">callable</span> <span class="n">mode</span><span class="p">:</span>
@@ -353,12 +353,12 @@ mentioned.</p>
  <span class="n">y</span><span class="p">:</span> <span class="n">Counter</span><span class="p">({</span><span class="mi">2</span><span class="p">:</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span> <span class="mi">25</span><span class="p">})</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the script:</strong> ( 0 minutes  0.296 seconds)</p>
+<p><strong>Total running time of the script:</strong> ( 0 minutes  0.276 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container">
 <div class="sphx-glr-download docutils container">
-<a class="reference download internal" href="../_downloads/plot_ratio_usage.py" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_ratio_usage.py</span></code></a></div>
+<a class="reference download internal" href="../_downloads/plot_ratio_usage.py" download=""><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_ratio_usage.py</span></code></a></div>
 <div class="sphx-glr-download docutils container">
-<a class="reference download internal" href="../_downloads/plot_ratio_usage.ipynb" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_ratio_usage.ipynb</span></code></a></div>
+<a class="reference download internal" href="../_downloads/plot_ratio_usage.ipynb" download=""><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_ratio_usage.ipynb</span></code></a></div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
 </div>

@@ -192,6 +192,9 @@ by <a class="reference external" href="https://github.com/glemaitre">Guillaume L
 <div class="section" id="bug-fixes">
 <h3>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
+<li>Fix bug in <code class="xref py py-func docutils literal notranslate"><span class="pre">metrics.classification_report_imbalanced</span></code> for which
+<cite>y_pred</cite> and <cite>y_true</cite> where inversed. <a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/issues/394">#394</a> by <a class="reference external" href="https://github.com/Ole Silvig &lt;klizter&gt;.">&#64;Ole Silvig
+&lt;klizter&gt;.</a></li>
 <li>Fix bug in ADASYN to consider only samples from the current class when
 generating new samples. <a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn/issues/354">#354</a> by <a class="reference external" href="https://github.com/glemaitre">Guillaume Lemaitre</a>.</li>
 </ul>

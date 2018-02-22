@@ -201,10 +201,10 @@
 <div class="section" id="samplers">
 <span id="ensemble-samplers"></span><h2>5.1. Samplers<a class="headerlink" href="#samplers" title="Permalink to this headline">¶</a></h2>
 <p>An imbalanced data set can be balanced by creating several balanced
-subsets. The module <a class="reference internal" href="api.html#module-imblearn.ensemble" title="imblearn.ensemble"><code class="xref py py-mod docutils literal"><span class="pre">imblearn.ensemble</span></code></a> allows to create such sets.</p>
-<p><a class="reference internal" href="generated/imblearn.ensemble.EasyEnsemble.html#imblearn.ensemble.EasyEnsemble" title="imblearn.ensemble.EasyEnsemble"><code class="xref py py-class docutils literal"><span class="pre">EasyEnsemble</span></code></a> creates an ensemble of data set by randomly
+subsets. The module <a class="reference internal" href="api.html#module-imblearn.ensemble" title="imblearn.ensemble"><code class="xref py py-mod docutils literal notranslate"><span class="pre">imblearn.ensemble</span></code></a> allows to create such sets.</p>
+<p><a class="reference internal" href="generated/imblearn.ensemble.EasyEnsemble.html#imblearn.ensemble.EasyEnsemble" title="imblearn.ensemble.EasyEnsemble"><code class="xref py py-class docutils literal notranslate"><span class="pre">EasyEnsemble</span></code></a> creates an ensemble of data set by randomly
 under-sampling the original set:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">Counter</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">Counter</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="k">import</span> <span class="n">make_classification</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">make_classification</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span> <span class="n">n_features</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">n_informative</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
 <span class="gp">... </span>                           <span class="n">n_redundant</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">n_repeated</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">n_classes</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
@@ -222,16 +222,16 @@ under-sampling the original set:</p>
 <span class="go">[(0, 64), (1, 64), (2, 64)]</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="generated/imblearn.ensemble.EasyEnsemble.html#imblearn.ensemble.EasyEnsemble" title="imblearn.ensemble.EasyEnsemble"><code class="xref py py-class docutils literal"><span class="pre">EasyEnsemble</span></code></a> has two important parameters: (i) <code class="docutils literal"><span class="pre">n_subsets</span></code> will be
-used to return number of subset and (ii) <code class="docutils literal"><span class="pre">replacement</span></code> to randomly sample
+<p><a class="reference internal" href="generated/imblearn.ensemble.EasyEnsemble.html#imblearn.ensemble.EasyEnsemble" title="imblearn.ensemble.EasyEnsemble"><code class="xref py py-class docutils literal notranslate"><span class="pre">EasyEnsemble</span></code></a> has two important parameters: (i) <code class="docutils literal notranslate"><span class="pre">n_subsets</span></code> will be
+used to return number of subset and (ii) <code class="docutils literal notranslate"><span class="pre">replacement</span></code> to randomly sample
 with or without replacement.</p>
-<p><a class="reference internal" href="generated/imblearn.ensemble.BalanceCascade.html#imblearn.ensemble.BalanceCascade" title="imblearn.ensemble.BalanceCascade"><code class="xref py py-class docutils literal"><span class="pre">BalanceCascade</span></code></a> differs from the previous method by using a classifier
-(using the parameter <code class="docutils literal"><span class="pre">estimator</span></code>) to ensure that misclassified samples can
+<p><a class="reference internal" href="generated/imblearn.ensemble.BalanceCascade.html#imblearn.ensemble.BalanceCascade" title="imblearn.ensemble.BalanceCascade"><code class="xref py py-class docutils literal notranslate"><span class="pre">BalanceCascade</span></code></a> differs from the previous method by using a classifier
+(using the parameter <code class="docutils literal notranslate"><span class="pre">estimator</span></code>) to ensure that misclassified samples can
 again be selected for the next subset. In fact, the classifier play the role of
 a “smart” replacement method. The maximum number of subset can be set using the
-parameter <code class="docutils literal"><span class="pre">n_max_subset</span></code> and an additional bootstraping can be activated with
-<code class="docutils literal"><span class="pre">bootstrap</span></code> set to <code class="docutils literal"><span class="pre">True</span></code>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">imblearn.ensemble</span> <span class="k">import</span> <span class="n">BalanceCascade</span>
+parameter <code class="docutils literal notranslate"><span class="pre">n_max_subset</span></code> and an additional bootstraping can be activated with
+<code class="docutils literal notranslate"><span class="pre">bootstrap</span></code> set to <code class="docutils literal notranslate"><span class="pre">True</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">imblearn.ensemble</span> <span class="k">import</span> <span class="n">BalanceCascade</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="k">import</span> <span class="n">LogisticRegression</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">bc</span> <span class="o">=</span> <span class="n">BalanceCascade</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
 <span class="gp">... </span>                    <span class="n">estimator</span><span class="o">=</span><span class="n">LogisticRegression</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
@@ -251,10 +251,10 @@ parameter <code class="docutils literal"><span class="pre">n_max_subset</span></
 <span id="ensemble-meta-estimators"></span><h2>5.2. Chaining ensemble of samplers and estimators<a class="headerlink" href="#chaining-ensemble-of-samplers-and-estimators" title="Permalink to this headline">¶</a></h2>
 <p>In ensemble classifiers, bagging methods build several estimators on different
 randomly selected subset of data. In scikit-learn, this classifier is named
-<code class="docutils literal"><span class="pre">BaggingClassifier</span></code>. However, this classifier does not allow to balance each
+<code class="docutils literal notranslate"><span class="pre">BaggingClassifier</span></code>. However, this classifier does not allow to balance each
 subset of data. Therefore, when training on imbalanced data set, this
 classifier will favor the majority classes:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="k">import</span> <span class="n">confusion_matrix</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="k">import</span> <span class="n">BaggingClassifier</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="k">import</span> <span class="n">DecisionTreeClassifier</span>
@@ -270,14 +270,14 @@ classifier will favor the majority classes:</p>
 <span class="go">       [   1,    6, 1172]])</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="generated/imblearn.ensemble.BalancedBaggingClassifier.html#imblearn.ensemble.BalancedBaggingClassifier" title="imblearn.ensemble.BalancedBaggingClassifier"><code class="xref py py-class docutils literal"><span class="pre">BalancedBaggingClassifier</span></code></a> allows to resample each subset of data
+<p><a class="reference internal" href="generated/imblearn.ensemble.BalancedBaggingClassifier.html#imblearn.ensemble.BalancedBaggingClassifier" title="imblearn.ensemble.BalancedBaggingClassifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">BalancedBaggingClassifier</span></code></a> allows to resample each subset of data
 before to train each estimator of the ensemble. In short, it combines the
-output of an <a class="reference internal" href="generated/imblearn.ensemble.EasyEnsemble.html#imblearn.ensemble.EasyEnsemble" title="imblearn.ensemble.EasyEnsemble"><code class="xref py py-class docutils literal"><span class="pre">EasyEnsemble</span></code></a> sampler with an ensemble of classifiers
-(i.e. <code class="docutils literal"><span class="pre">BaggingClassifier</span></code>). Therefore, <a class="reference internal" href="generated/imblearn.ensemble.BalancedBaggingClassifier.html#imblearn.ensemble.BalancedBaggingClassifier" title="imblearn.ensemble.BalancedBaggingClassifier"><code class="xref py py-class docutils literal"><span class="pre">BalancedBaggingClassifier</span></code></a>
+output of an <a class="reference internal" href="generated/imblearn.ensemble.EasyEnsemble.html#imblearn.ensemble.EasyEnsemble" title="imblearn.ensemble.EasyEnsemble"><code class="xref py py-class docutils literal notranslate"><span class="pre">EasyEnsemble</span></code></a> sampler with an ensemble of classifiers
+(i.e. <code class="docutils literal notranslate"><span class="pre">BaggingClassifier</span></code>). Therefore, <a class="reference internal" href="generated/imblearn.ensemble.BalancedBaggingClassifier.html#imblearn.ensemble.BalancedBaggingClassifier" title="imblearn.ensemble.BalancedBaggingClassifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">BalancedBaggingClassifier</span></code></a>
 takes the same parameters than the scikit-learn
-<code class="docutils literal"><span class="pre">BaggingClassifier</span></code>. Additionally, there is two additional parameters,
-<code class="docutils literal"><span class="pre">ratio</span></code> and <code class="docutils literal"><span class="pre">replacement</span></code>, as in the <a class="reference internal" href="generated/imblearn.ensemble.EasyEnsemble.html#imblearn.ensemble.EasyEnsemble" title="imblearn.ensemble.EasyEnsemble"><code class="xref py py-class docutils literal"><span class="pre">EasyEnsemble</span></code></a> sampler:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">imblearn.ensemble</span> <span class="k">import</span> <span class="n">BalancedBaggingClassifier</span>
+<code class="docutils literal notranslate"><span class="pre">BaggingClassifier</span></code>. Additionally, there is two additional parameters,
+<code class="docutils literal notranslate"><span class="pre">ratio</span></code> and <code class="docutils literal notranslate"><span class="pre">replacement</span></code>, as in the <a class="reference internal" href="generated/imblearn.ensemble.EasyEnsemble.html#imblearn.ensemble.EasyEnsemble" title="imblearn.ensemble.EasyEnsemble"><code class="xref py py-class docutils literal notranslate"><span class="pre">EasyEnsemble</span></code></a> sampler:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">imblearn.ensemble</span> <span class="k">import</span> <span class="n">BalancedBaggingClassifier</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">bbc</span> <span class="o">=</span> <span class="n">BalancedBaggingClassifier</span><span class="p">(</span><span class="n">base_estimator</span><span class="o">=</span><span class="n">DecisionTreeClassifier</span><span class="p">(),</span>
 <span class="gp">... </span>                                <span class="n">ratio</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span>
 <span class="gp">... </span>                                <span class="n">replacement</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
@@ -293,9 +293,9 @@ takes the same parameters than the scikit-learn
 </div>
 <p>It also possible to turn a balanced bagging classifier into a balanced random
 forest using a decision tree classifier and setting the parameter
-<code class="docutils literal"><span class="pre">max_features='auto'</span></code>. It allows to randomly select a subset of features for
+<code class="docutils literal notranslate"><span class="pre">max_features='auto'</span></code>. It allows to randomly select a subset of features for
 each tree:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">brf</span> <span class="o">=</span> <span class="n">BalancedBaggingClassifier</span><span class="p">(</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">brf</span> <span class="o">=</span> <span class="n">BalancedBaggingClassifier</span><span class="p">(</span>
 <span class="gp">... </span>         <span class="n">base_estimator</span><span class="o">=</span><span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">max_features</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">),</span>
 <span class="gp">... </span>         <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">brf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span> 

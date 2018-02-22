@@ -145,10 +145,10 @@ classifiers.
     Classification results using a bagging classifier on balanced data
                        pre       rec       spe        f1       geo       iba       sup
 
-             -1       0.99      0.86      0.68      0.92      0.36      0.14       615
-              1       0.13      0.68      0.86      0.22      0.36      0.12        19
+             -1       0.99      0.86      0.68      0.92      0.77      0.60       615
+              1       0.13      0.68      0.86      0.22      0.77      0.58        19
 
-    avg / total       0.96      0.86      0.69      0.90      0.36      0.14       634
+    avg / total       0.96      0.86      0.69      0.90      0.77      0.60       634
 
     Confusion matrix, without normalization
     [[530  85]
@@ -195,17 +195,17 @@ Turning the balanced bagging classifier into a balanced random forest
     Classification results using a balanced random forest classifier on imbalanced data
                        pre       rec       spe        f1       geo       iba       sup
 
-             -1       0.99      0.90      0.58      0.94      0.39      0.16       615
-              1       0.15      0.58      0.90      0.24      0.39      0.14        19
+             -1       0.99      0.90      0.58      0.94      0.72      0.54       615
+              1       0.15      0.58      0.90      0.24      0.72      0.50        19
 
-    avg / total       0.96      0.89      0.59      0.92      0.39      0.16       634
+    avg / total       0.96      0.89      0.59      0.92      0.72      0.54       634
 
     Confusion matrix, without normalization
     [[554  61]
      [  8  11]]
 
 
-**Total running time of the script:** ( 0 minutes  17.232 seconds)
+**Total running time of the script:** ( 0 minutes  17.508 seconds)
 
 
 

@@ -278,8 +278,8 @@
                  <span class="n">random_state</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">TomekLinks</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">ratio</span><span class="o">=</span><span class="n">ratio</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">random_state</span> <span class="o">=</span> <span class="n">random_state</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">return_indices</span> <span class="o">=</span> <span class="n">return_indices</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">n_jobs</span> <span class="o">=</span> <span class="n">n_jobs</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">return_indices</span> <span class="o">=</span> <span class="n">return_indices</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_jobs</span> <span class="o">=</span> <span class="n">n_jobs</span>
 
 <div class="viewcode-block" id="TomekLinks.is_tomek"><a class="viewcode-back" href="../../../../generated/imblearn.under_sampling.TomekLinks.html#imblearn.under_sampling.TomekLinks.is_tomek">[docs]</a>    <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">is_tomek</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">nn_index</span><span class="p">,</span> <span class="n">class_type</span><span class="p">):</span>
@@ -320,8 +320,8 @@
             <span class="k">if</span> <span class="n">y</span><span class="p">[</span><span class="n">nn_index</span><span class="p">[</span><span class="n">index_sample</span><span class="p">]]</span> <span class="o">!=</span> <span class="n">target_sample</span><span class="p">:</span>
                 <span class="k">if</span> <span class="n">nn_index</span><span class="p">[</span><span class="n">nn_index</span><span class="p">[</span><span class="n">index_sample</span><span class="p">]]</span> <span class="o">==</span> <span class="n">index_sample</span><span class="p">:</span>
                     <span class="n">links</span><span class="p">[</span><span class="n">index_sample</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
-
-        <span class="k">return</span> <span class="n">links</span></div>
+</div>
+        <span class="k">return</span> <span class="n">links</span>
 
     <span class="k">def</span> <span class="nf">_sample</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Resample the dataset.</span>
@@ -365,8 +365,8 @@
                     <span class="n">safe_indexing</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">idx_under</span><span class="p">),</span>
                     <span class="n">idx_under</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="p">(</span><span class="n">safe_indexing</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">idx_under</span><span class="p">),</span>
-                    <span class="n">safe_indexing</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">idx_under</span><span class="p">))</span></div>
+            <span class="k">return</span> <span class="p">(</span><span class="n">safe_indexing</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">idx_under</span><span class="p">),</span></div>
+                    <span class="n">safe_indexing</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">idx_under</span><span class="p">))</span>
 </pre></div>
 
            </div>

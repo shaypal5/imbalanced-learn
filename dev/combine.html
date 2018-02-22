@@ -194,18 +194,18 @@
             
   <div class="section" id="combination-of-over-and-under-sampling">
 <span id="combine"></span><h1>4. Combination of over- and under-sampling<a class="headerlink" href="#combination-of-over-and-under-sampling" title="Permalink to this headline">¶</a></h1>
-<p>We previously presented <a class="reference internal" href="generated/imblearn.over_sampling.SMOTE.html#imblearn.over_sampling.SMOTE" title="imblearn.over_sampling.SMOTE"><code class="xref py py-class docutils literal"><span class="pre">SMOTE</span></code></a> and showed that this method can generate
+<p>We previously presented <a class="reference internal" href="generated/imblearn.over_sampling.SMOTE.html#imblearn.over_sampling.SMOTE" title="imblearn.over_sampling.SMOTE"><code class="xref py py-class docutils literal notranslate"><span class="pre">SMOTE</span></code></a> and showed that this method can generate
 noisy samples by interpolating new points between marginal outliers and
 inliers. This issue can be solved by cleaning the space resulting
 from over-sampling.</p>
 <p>In this regard, Tomek’s link and edited nearest-neighbours are the two cleaning
 methods that have been added to the pipeline after applying SMOTE over-sampling
 to obtain a cleaner space. The two ready-to use classes imbalanced-learn implements
-for combining over- and undersampling methods are: (i) <a class="reference internal" href="generated/imblearn.combine.SMOTETomek.html#imblearn.combine.SMOTETomek" title="imblearn.combine.SMOTETomek"><code class="xref py py-class docutils literal"><span class="pre">SMOTETomek</span></code></a>
-and (ii) <a class="reference internal" href="generated/imblearn.combine.SMOTEENN.html#imblearn.combine.SMOTEENN" title="imblearn.combine.SMOTEENN"><code class="xref py py-class docutils literal"><span class="pre">SMOTEENN</span></code></a>.</p>
+for combining over- and undersampling methods are: (i) <a class="reference internal" href="generated/imblearn.combine.SMOTETomek.html#imblearn.combine.SMOTETomek" title="imblearn.combine.SMOTETomek"><code class="xref py py-class docutils literal notranslate"><span class="pre">SMOTETomek</span></code></a>
+and (ii) <a class="reference internal" href="generated/imblearn.combine.SMOTEENN.html#imblearn.combine.SMOTEENN" title="imblearn.combine.SMOTEENN"><code class="xref py py-class docutils literal notranslate"><span class="pre">SMOTEENN</span></code></a>.</p>
 <p>Those two classes can be used like any other sampler with parameters identical
 to their former samplers:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">Counter</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">Counter</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="k">import</span> <span class="n">make_classification</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">make_classification</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span> <span class="n">n_features</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">n_informative</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
 <span class="gp">... </span>                           <span class="n">n_redundant</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">n_repeated</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">n_classes</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
@@ -226,8 +226,8 @@ to their former samplers:</p>
 <span class="go">[(0, 4499), (1, 4566), (2, 4413)]</span>
 </pre></div>
 </div>
-<p>We can also see in the example below that <a class="reference internal" href="generated/imblearn.combine.SMOTEENN.html#imblearn.combine.SMOTEENN" title="imblearn.combine.SMOTEENN"><code class="xref py py-class docutils literal"><span class="pre">SMOTEENN</span></code></a> tends to clean more
-noisy samples than <a class="reference internal" href="generated/imblearn.combine.SMOTETomek.html#imblearn.combine.SMOTETomek" title="imblearn.combine.SMOTETomek"><code class="xref py py-class docutils literal"><span class="pre">SMOTETomek</span></code></a>.</p>
+<p>We can also see in the example below that <a class="reference internal" href="generated/imblearn.combine.SMOTEENN.html#imblearn.combine.SMOTEENN" title="imblearn.combine.SMOTEENN"><code class="xref py py-class docutils literal notranslate"><span class="pre">SMOTEENN</span></code></a> tends to clean more
+noisy samples than <a class="reference internal" href="generated/imblearn.combine.SMOTETomek.html#imblearn.combine.SMOTETomek" title="imblearn.combine.SMOTETomek"><code class="xref py py-class docutils literal notranslate"><span class="pre">SMOTETomek</span></code></a>.</p>
 <a class="reference external image-reference" href="./auto_examples/combine/plot_comparison_combine.html"><img alt="_images/sphx_glr_plot_comparison_combine_0011.png" class="align-center" src="_images/sphx_glr_plot_comparison_combine_0011.png" style="width: 900.0px; height: 1500.0px;" /></a>
 <p>See <a class="reference internal" href="auto_examples/combine/plot_smote_enn.html#sphx-glr-auto-examples-combine-plot-smote-enn-py"><span class="std std-ref">SMOTE + ENN</span></a>,
 <a class="reference internal" href="auto_examples/combine/plot_smote_tomek.html#sphx-glr-auto-examples-combine-plot-smote-tomek-py"><span class="std std-ref">SMOTE + Tomek</span></a>,

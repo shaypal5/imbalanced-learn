@@ -204,7 +204,7 @@
   <div class="section" id="illustration-of-the-definition-of-a-tomek-link">
 <span id="sphx-glr-auto-examples-under-sampling-plot-illustration-tomek-links-py"></span><h1>Illustration of the definition of a Tomek link<a class="headerlink" href="#illustration-of-the-definition-of-a-tomek-link" title="Permalink to this headline">¶</a></h1>
 <p>This example illustrates what is a Tomek link.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 
 <span class="kn">from</span> <span class="nn">imblearn.under_sampling</span> <span class="kn">import</span> <a href="../../generated/imblearn.under_sampling.TomekLinks.html#imblearn.under_sampling.TomekLinks" title="View documentation for imblearn.under_sampling.TomekLinks"><span class="n">TomekLinks</span></a>
@@ -215,7 +215,7 @@
 </pre></div>
 </div>
 <p>This function allows to make nice plotting</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">make_plot_despine</span><span class="p">(</span><span class="n">ax</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">make_plot_despine</span><span class="p">(</span><span class="n">ax</span><span class="p">):</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;top&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;right&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">get_xaxis</span><span class="p">()</span><span class="o">.</span><span class="n">tick_bottom</span><span class="p">()</span>
@@ -230,7 +230,7 @@
 </pre></div>
 </div>
 <p>Generate some data with one Tomek link</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># minority class</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># minority class</span>
 <span class="n">X_minority</span> <span class="o">=</span> <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.transpose.html#numpy.transpose" title="View documentation for numpy.transpose"><span class="n">np</span><span class="o">.</span><span class="n">transpose</span></a><span class="p">([[</span><span class="mf">1.1</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">,</span> <span class="mf">1.15</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.55</span><span class="p">,</span> <span class="mf">2.1</span><span class="p">],</span>
                            <span class="p">[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mf">0.55</span><span class="p">,</span> <span class="mf">1.9</span><span class="p">]])</span>
 <span class="c1"># majority class</span>
@@ -240,7 +240,7 @@
 </div>
 <p>In the figure above, the samples highlighted in green form a Tomek link since
 they are of different classes and are nearest neighbours of each other.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots" title="View documentation for matplotlib.pyplot.subplots"><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span></a><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots" title="View documentation for matplotlib.pyplot.subplots"><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span></a><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X_minority</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X_minority</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span>
            <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Minority class&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;_&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X_majority</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X_majority</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span>
@@ -256,10 +256,10 @@ they are of different classes and are nearest neighbours of each other.</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_plot_illustration_tomek_links_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot_illustration_tomek_links_001.png" />
-<p>We can run the <code class="docutils literal"><span class="pre">TomekLinks</span></code> sampling to remove the corresponding
-samples. If <code class="docutils literal"><span class="pre">ratio='auto'</span></code> only the sample from the majority class will be
-removed. If <code class="docutils literal"><span class="pre">ratio='all'</span></code> both samples will be removed.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">sampler</span> <span class="o">=</span> <a href="../../generated/imblearn.under_sampling.TomekLinks.html#imblearn.under_sampling.TomekLinks" title="View documentation for imblearn.under_sampling.TomekLinks"><span class="n">TomekLinks</span></a><span class="p">()</span>
+<p>We can run the <code class="docutils literal notranslate"><span class="pre">TomekLinks</span></code> sampling to remove the corresponding
+samples. If <code class="docutils literal notranslate"><span class="pre">ratio='auto'</span></code> only the sample from the majority class will be
+removed. If <code class="docutils literal notranslate"><span class="pre">ratio='all'</span></code> both samples will be removed.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sampler</span> <span class="o">=</span> <a href="../../generated/imblearn.under_sampling.TomekLinks.html#imblearn.under_sampling.TomekLinks" title="View documentation for imblearn.under_sampling.TomekLinks"><span class="n">TomekLinks</span></a><span class="p">()</span>
 
 <span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots" title="View documentation for matplotlib.pyplot.subplots"><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span></a><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 
@@ -291,12 +291,12 @@ removed. If <code class="docutils literal"><span class="pre">ratio='all'</span><
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_plot_illustration_tomek_links_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot_illustration_tomek_links_002.png" />
-<p><strong>Total running time of the script:</strong> ( 0 minutes  0.262 seconds)</p>
+<p><strong>Total running time of the script:</strong> ( 0 minutes  0.259 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container">
 <div class="sphx-glr-download docutils container">
-<a class="reference download internal" href="../../_downloads/plot_illustration_tomek_links.py" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_illustration_tomek_links.py</span></code></a></div>
+<a class="reference download internal" href="../../_downloads/plot_illustration_tomek_links.py" download=""><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_illustration_tomek_links.py</span></code></a></div>
 <div class="sphx-glr-download docutils container">
-<a class="reference download internal" href="../../_downloads/plot_illustration_tomek_links.ipynb" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_illustration_tomek_links.ipynb</span></code></a></div>
+<a class="reference download internal" href="../../_downloads/plot_illustration_tomek_links.ipynb" download=""><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_illustration_tomek_links.ipynb</span></code></a></div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
 </div>

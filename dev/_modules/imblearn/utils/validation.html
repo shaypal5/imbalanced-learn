@@ -230,8 +230,8 @@
         <span class="k">return</span> <span class="n">NearestNeighbors</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="n">nn_object</span> <span class="o">+</span> <span class="n">additional_neighbor</span><span class="p">)</span>
     <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">nn_object</span><span class="p">,</span> <span class="n">KNeighborsMixin</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">nn_object</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">raise_isinstance_error</span><span class="p">(</span><span class="n">nn_name</span><span class="p">,</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">KNeighborsMixin</span><span class="p">],</span> <span class="n">nn_object</span><span class="p">)</span></div>
+    <span class="k">else</span><span class="p">:</span></div>
+        <span class="n">raise_isinstance_error</span><span class="p">(</span><span class="n">nn_name</span><span class="p">,</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">KNeighborsMixin</span><span class="p">],</span> <span class="n">nn_object</span><span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">check_target_type</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
@@ -285,8 +285,8 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">row_idx</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">//</span> <span class="n">n_samples</span><span class="p">))</span>
     <span class="n">col_idx</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">//</span> <span class="n">n_features</span><span class="p">))</span>
-
-    <span class="k">return</span> <span class="n">joblib</span><span class="o">.</span><span class="n">hash</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">row_idx</span><span class="p">,</span> <span class="n">col_idx</span><span class="p">]),</span> <span class="n">joblib</span><span class="o">.</span><span class="n">hash</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="n">row_idx</span><span class="p">])</span></div>
+</div>
+    <span class="k">return</span> <span class="n">joblib</span><span class="o">.</span><span class="n">hash</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">row_idx</span><span class="p">,</span> <span class="n">col_idx</span><span class="p">]),</span> <span class="n">joblib</span><span class="o">.</span><span class="n">hash</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="n">row_idx</span><span class="p">])</span>
 
 
 <span class="k">def</span> <span class="nf">_ratio_all</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">sampling_type</span><span class="p">):</span>
@@ -494,8 +494,8 @@
     <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ratio</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">_ratio_dict</span><span class="p">(</span><span class="n">ratio</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sampling_type</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">callable</span><span class="p">(</span><span class="n">ratio</span><span class="p">):</span>
-        <span class="n">ratio_</span> <span class="o">=</span> <span class="n">ratio</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">_ratio_dict</span><span class="p">(</span><span class="n">ratio_</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sampling_type</span><span class="p">)</span></div>
+        <span class="n">ratio_</span> <span class="o">=</span> <span class="n">ratio</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+        <span class="k">return</span> <span class="n">_ratio_dict</span><span class="p">(</span><span class="n">ratio_</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sampling_type</span><span class="p">)</span>
 
 
 <span class="n">RATIO_KIND</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;minority&#39;</span><span class="p">:</span> <span class="n">_ratio_minority</span><span class="p">,</span>

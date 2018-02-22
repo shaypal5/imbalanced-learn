@@ -292,8 +292,8 @@
             <span class="n">ratio</span><span class="o">=</span><span class="n">ratio</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">random_state</span> <span class="o">=</span> <span class="n">random_state</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">estimator</span> <span class="o">=</span> <span class="n">estimator</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">voting</span> <span class="o">=</span> <span class="n">voting</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">n_jobs</span> <span class="o">=</span> <span class="n">n_jobs</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">voting</span> <span class="o">=</span> <span class="n">voting</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_jobs</span> <span class="o">=</span> <span class="n">n_jobs</span>
 
     <span class="k">def</span> <span class="nf">_validate_estimator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Private function to create the KMeans estimator&quot;&quot;&quot;</span>
@@ -377,8 +377,8 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="n">X_resampled</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">(</span><span class="n">X_resampled</span><span class="p">)</span>
         <span class="n">y_resampled</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">(</span><span class="n">y_resampled</span><span class="p">)</span>
-
-        <span class="k">return</span> <span class="n">X_resampled</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">y_resampled</span><span class="p">)</span></div>
+</div>
+        <span class="k">return</span> <span class="n">X_resampled</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">y_resampled</span><span class="p">)</span>
 </pre></div>
 
            </div>

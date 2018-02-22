@@ -199,8 +199,8 @@
   <div class="section" id="metrics">
 <span id="id1"></span><h1>7. Metrics<a class="headerlink" href="#metrics" title="Permalink to this headline">¶</a></h1>
 <p>Currently, scikit-learn only offers the
-<code class="docutils literal"><span class="pre">sklearn.metrics.balanced_accuracy_score</span></code> (in 0.20) as metric to deal with
-imbalanced datasets. The module <a class="reference internal" href="api.html#module-imblearn.metrics" title="imblearn.metrics"><code class="xref py py-mod docutils literal"><span class="pre">imblearn.metrics</span></code></a> offers a couple of
+<code class="docutils literal notranslate"><span class="pre">sklearn.metrics.balanced_accuracy_score</span></code> (in 0.20) as metric to deal with
+imbalanced datasets. The module <a class="reference internal" href="api.html#module-imblearn.metrics" title="imblearn.metrics"><code class="xref py py-mod docutils literal notranslate"><span class="pre">imblearn.metrics</span></code></a> offers a couple of
 other metrics which are used in the literature to evaluate the quality of
 classifiers.</p>
 <div class="section" id="sensitivity-and-specificity-metrics">
@@ -213,17 +213,17 @@ which are well classified. Therefore, depending of the field of application,
 either the sensitivity/specificity or the precision/recall pair of metrics are
 used.</p>
 <p>Currently, only the <a class="reference external" href="http://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_recall_fscore_support.html">precision and recall metrics</a>
-are implemented in scikit-learn. <a class="reference internal" href="generated/imblearn.metrics.sensitivity_specificity_support.html#imblearn.metrics.sensitivity_specificity_support" title="imblearn.metrics.sensitivity_specificity_support"><code class="xref py py-func docutils literal"><span class="pre">sensitivity_specificity_support</span></code></a>,
-<a class="reference internal" href="generated/imblearn.metrics.sensitivity_score.html#imblearn.metrics.sensitivity_score" title="imblearn.metrics.sensitivity_score"><code class="xref py py-func docutils literal"><span class="pre">sensitivity_score</span></code></a>, and <a class="reference internal" href="generated/imblearn.metrics.specificity_score.html#imblearn.metrics.specificity_score" title="imblearn.metrics.specificity_score"><code class="xref py py-func docutils literal"><span class="pre">specificity_score</span></code></a> add the possibility to
+are implemented in scikit-learn. <a class="reference internal" href="generated/imblearn.metrics.sensitivity_specificity_support.html#imblearn.metrics.sensitivity_specificity_support" title="imblearn.metrics.sensitivity_specificity_support"><code class="xref py py-func docutils literal notranslate"><span class="pre">sensitivity_specificity_support</span></code></a>,
+<a class="reference internal" href="generated/imblearn.metrics.sensitivity_score.html#imblearn.metrics.sensitivity_score" title="imblearn.metrics.sensitivity_score"><code class="xref py py-func docutils literal notranslate"><span class="pre">sensitivity_score</span></code></a>, and <a class="reference internal" href="generated/imblearn.metrics.specificity_score.html#imblearn.metrics.specificity_score" title="imblearn.metrics.specificity_score"><code class="xref py py-func docutils literal notranslate"><span class="pre">specificity_score</span></code></a> add the possibility to
 use those metrics.</p>
 </div>
 <div class="section" id="additional-metrics-specific-to-imbalanced-datasets">
 <span id="imbalanced-metrics"></span><h2>7.2. Additional metrics specific to imbalanced datasets<a class="headerlink" href="#additional-metrics-specific-to-imbalanced-datasets" title="Permalink to this headline">¶</a></h2>
-<p>The <a class="reference internal" href="generated/imblearn.metrics.geometric_mean_score.html#imblearn.metrics.geometric_mean_score" title="imblearn.metrics.geometric_mean_score"><code class="xref py py-func docutils literal"><span class="pre">geometric_mean_score</span></code></a> is the root of the product of class-wise
+<p>The <a class="reference internal" href="generated/imblearn.metrics.geometric_mean_score.html#imblearn.metrics.geometric_mean_score" title="imblearn.metrics.geometric_mean_score"><code class="xref py py-func docutils literal notranslate"><span class="pre">geometric_mean_score</span></code></a> is the root of the product of class-wise
 sensitivity. This measure tries to maximize the accuracy on each of the classes
 while keeping these accuracies balanced.</p>
-<p>The <a class="reference internal" href="generated/imblearn.metrics.make_index_balanced_accuracy.html#imblearn.metrics.make_index_balanced_accuracy" title="imblearn.metrics.make_index_balanced_accuracy"><code class="xref py py-func docutils literal"><span class="pre">make_index_balanced_accuracy</span></code></a> can wrap any metric and give more
-importance to a specific class using the parameter <code class="docutils literal"><span class="pre">alpha</span></code>.</p>
+<p>The <a class="reference internal" href="generated/imblearn.metrics.make_index_balanced_accuracy.html#imblearn.metrics.make_index_balanced_accuracy" title="imblearn.metrics.make_index_balanced_accuracy"><code class="xref py py-func docutils literal notranslate"><span class="pre">make_index_balanced_accuracy</span></code></a> can wrap any metric and give more
+importance to a specific class using the parameter <code class="docutils literal notranslate"><span class="pre">alpha</span></code>.</p>
 </div>
 </div>
 

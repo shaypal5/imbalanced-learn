@@ -191,7 +191,7 @@
 has been trained using imbalanced data. <cite>imblearn</cite> provides mainly
 two additional metrics which are not implemented in <cite>sklearn</cite>: (i)
 geometric mean and (ii) index balanced accuracy.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># Authors: Guillaume Lemaitre &lt;g.lemaitre58@gmail.com&gt;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Authors: Guillaume Lemaitre &lt;g.lemaitre58@gmail.com&gt;</span>
 <span class="c1"># License: MIT</span>
 
 <span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">datasets</span>
@@ -231,18 +231,18 @@ geometric mean and (ii) index balanced accuracy.</p>
 <p>The geometric mean corresponds to the square root of the product of the
 sensitivity and specificity. Combining the two metrics should account for
 the balancing of the dataset.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;The geometric mean is {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><a href="../../generated/imblearn.metrics.geometric_mean_score.html#imblearn.metrics.geometric_mean_score" title="View documentation for imblearn.metrics.geometric_mean_score"><span class="n">geometric_mean_score</span></a><span class="p">(</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;The geometric mean is {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><a href="../../generated/imblearn.metrics.geometric_mean_score.html#imblearn.metrics.geometric_mean_score" title="View documentation for imblearn.metrics.geometric_mean_score"><span class="n">geometric_mean_score</span></a><span class="p">(</span>
     <span class="n">y_test</span><span class="p">,</span>
     <span class="n">y_pred_bal</span><span class="p">)))</span>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-default"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">geometric</span> <span class="n">mean</span> <span class="ow">is</span> <span class="mf">0.9262633940760341</span>
+<div class="sphx-glr-script-out highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">geometric</span> <span class="n">mean</span> <span class="ow">is</span> <span class="mf">0.9262633940760341</span>
 </pre></div>
 </div>
 <p>The index balanced accuracy can transform any metric to be used in
 imbalanced learning problems.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.1</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.1</span>
 <span class="n">geo_mean</span> <span class="o">=</span> <a href="../../generated/imblearn.metrics.make_index_balanced_accuracy.html#imblearn.metrics.make_index_balanced_accuracy" title="View documentation for imblearn.metrics.make_index_balanced_accuracy"><span class="n">make_index_balanced_accuracy</span></a><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">,</span> <span class="n">squared</span><span class="o">=</span><span class="bp">True</span><span class="p">)(</span>
     <a href="../../generated/imblearn.metrics.geometric_mean_score.html#imblearn.metrics.geometric_mean_score" title="View documentation for imblearn.metrics.geometric_mean_score"><span class="n">geometric_mean_score</span></a><span class="p">)</span>
 
@@ -262,16 +262,16 @@ imbalanced learning problems.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-default"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">IBA</span> <span class="n">using</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">geometric</span> <span class="n">mean</span><span class="p">:</span> <span class="mf">0.8579638752052544</span>
+<div class="sphx-glr-script-out highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">IBA</span> <span class="n">using</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">geometric</span> <span class="n">mean</span><span class="p">:</span> <span class="mf">0.8579638752052544</span>
 <span class="n">The</span> <span class="n">IBA</span> <span class="n">using</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">geometric</span> <span class="n">mean</span><span class="p">:</span> <span class="mf">0.8579638752052544</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the script:</strong> ( 0 minutes  0.451 seconds)</p>
+<p><strong>Total running time of the script:</strong> ( 0 minutes  0.437 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container">
 <div class="sphx-glr-download docutils container">
-<a class="reference download internal" href="../../_downloads/plot_metrics.py" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_metrics.py</span></code></a></div>
+<a class="reference download internal" href="../../_downloads/plot_metrics.py" download=""><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_metrics.py</span></code></a></div>
 <div class="sphx-glr-download docutils container">
-<a class="reference download internal" href="../../_downloads/plot_metrics.ipynb" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_metrics.ipynb</span></code></a></div>
+<a class="reference download internal" href="../../_downloads/plot_metrics.ipynb" download=""><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_metrics.ipynb</span></code></a></div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
 </div>

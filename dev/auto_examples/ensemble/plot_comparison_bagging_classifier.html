@@ -196,14 +196,14 @@
   <div class="section" id="comparison-of-balanced-and-imbalanced-bagging-classifiers">
 <span id="sphx-glr-auto-examples-ensemble-plot-comparison-bagging-classifier-py"></span><h1>Comparison of balanced and imbalanced bagging classifiers<a class="headerlink" href="#comparison-of-balanced-and-imbalanced-bagging-classifiers" title="Permalink to this headline">¶</a></h1>
 <p>This example shows the benefit of balancing the training set when using a
-bagging classifier. <code class="docutils literal"><span class="pre">BalancedBaggingClassifier</span></code> chains a
-<code class="docutils literal"><span class="pre">RandomUnderSampler</span></code> and a given classifier while <code class="docutils literal"><span class="pre">BaggingClassifier</span></code> is
+bagging classifier. <code class="docutils literal notranslate"><span class="pre">BalancedBaggingClassifier</span></code> chains a
+<code class="docutils literal notranslate"><span class="pre">RandomUnderSampler</span></code> and a given classifier while <code class="docutils literal notranslate"><span class="pre">BaggingClassifier</span></code> is
 using directly the imbalanced data.</p>
 <p>Balancing the data set before training the classifier improve the
 classification performance. In addition, it avoids the ensemble to focus on the
 majority class which would be a known drawback of the decision tree
 classifiers.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># Authors: Guillaume Lemaitre &lt;g.lemaitre58@gmail.com&gt;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Authors: Guillaume Lemaitre &lt;g.lemaitre58@gmail.com&gt;</span>
 <span class="c1"># License: MIT</span>
 
 <span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
@@ -296,7 +296,7 @@ classifiers.</p>
 </li>
 </ul>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-default"><div class="highlight"><pre><span></span><span class="n">Class</span> <span class="n">distribution</span> <span class="n">of</span> <span class="n">the</span> <span class="n">training</span> <span class="nb">set</span><span class="p">:</span> <span class="n">Counter</span><span class="p">({</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span> <span class="mi">1848</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">54</span><span class="p">})</span>
+<div class="sphx-glr-script-out highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Class</span> <span class="n">distribution</span> <span class="n">of</span> <span class="n">the</span> <span class="n">training</span> <span class="nb">set</span><span class="p">:</span> <span class="n">Counter</span><span class="p">({</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span> <span class="mi">1848</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">54</span><span class="p">})</span>
 <span class="n">Class</span> <span class="n">distribution</span> <span class="n">of</span> <span class="n">the</span> <span class="n">test</span> <span class="nb">set</span><span class="p">:</span> <span class="n">Counter</span><span class="p">({</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span> <span class="mi">615</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">19</span><span class="p">})</span>
 <span class="n">Classification</span> <span class="n">results</span> <span class="n">using</span> <span class="n">a</span> <span class="n">bagging</span> <span class="n">classifier</span> <span class="n">on</span> <span class="n">imbalanced</span> <span class="n">data</span>
                    <span class="n">pre</span>       <span class="n">rec</span>       <span class="n">spe</span>        <span class="n">f1</span>       <span class="n">geo</span>       <span class="n">iba</span>       <span class="n">sup</span>
@@ -312,10 +312,10 @@ classifiers.</p>
 <span class="n">Classification</span> <span class="n">results</span> <span class="n">using</span> <span class="n">a</span> <span class="n">bagging</span> <span class="n">classifier</span> <span class="n">on</span> <span class="n">balanced</span> <span class="n">data</span>
                    <span class="n">pre</span>       <span class="n">rec</span>       <span class="n">spe</span>        <span class="n">f1</span>       <span class="n">geo</span>       <span class="n">iba</span>       <span class="n">sup</span>
 
-         <span class="o">-</span><span class="mi">1</span>       <span class="mf">0.99</span>      <span class="mf">0.86</span>      <span class="mf">0.68</span>      <span class="mf">0.92</span>      <span class="mf">0.36</span>      <span class="mf">0.14</span>       <span class="mi">615</span>
-          <span class="mi">1</span>       <span class="mf">0.13</span>      <span class="mf">0.68</span>      <span class="mf">0.86</span>      <span class="mf">0.22</span>      <span class="mf">0.36</span>      <span class="mf">0.12</span>        <span class="mi">19</span>
+         <span class="o">-</span><span class="mi">1</span>       <span class="mf">0.99</span>      <span class="mf">0.86</span>      <span class="mf">0.68</span>      <span class="mf">0.92</span>      <span class="mf">0.77</span>      <span class="mf">0.60</span>       <span class="mi">615</span>
+          <span class="mi">1</span>       <span class="mf">0.13</span>      <span class="mf">0.68</span>      <span class="mf">0.86</span>      <span class="mf">0.22</span>      <span class="mf">0.77</span>      <span class="mf">0.58</span>        <span class="mi">19</span>
 
-<span class="n">avg</span> <span class="o">/</span> <span class="n">total</span>       <span class="mf">0.96</span>      <span class="mf">0.86</span>      <span class="mf">0.69</span>      <span class="mf">0.90</span>      <span class="mf">0.36</span>      <span class="mf">0.14</span>       <span class="mi">634</span>
+<span class="n">avg</span> <span class="o">/</span> <span class="n">total</span>       <span class="mf">0.96</span>      <span class="mf">0.86</span>      <span class="mf">0.69</span>      <span class="mf">0.90</span>      <span class="mf">0.77</span>      <span class="mf">0.60</span>       <span class="mi">634</span>
 
 <span class="n">Confusion</span> <span class="n">matrix</span><span class="p">,</span> <span class="n">without</span> <span class="n">normalization</span>
 <span class="p">[[</span><span class="mi">530</span>  <span class="mi">85</span><span class="p">]</span>
@@ -325,10 +325,10 @@ classifiers.</p>
 <div class="section" id="turning-the-balanced-bagging-classifier-into-a-balanced-random-forest">
 <h2>Turning the balanced bagging classifier into a balanced random forest<a class="headerlink" href="#turning-the-balanced-bagging-classifier-into-a-balanced-random-forest" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div>It is possible to turn the <code class="docutils literal"><span class="pre">BalancedBaggingClassifier</span></code> into a balanced
-random forest by using a <code class="docutils literal"><span class="pre">DecisionTreeClassifier</span></code> with
-<code class="docutils literal"><span class="pre">max_features='auto'</span></code>. We illustrate such changes below.</div></blockquote>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">balanced_random_forest</span> <span class="o">=</span> <a href="../../generated/imblearn.ensemble.BalancedBaggingClassifier.html#imblearn.ensemble.BalancedBaggingClassifier" title="View documentation for imblearn.ensemble.BalancedBaggingClassifier"><span class="n">BalancedBaggingClassifier</span></a><span class="p">(</span>
+<div>It is possible to turn the <code class="docutils literal notranslate"><span class="pre">BalancedBaggingClassifier</span></code> into a balanced
+random forest by using a <code class="docutils literal notranslate"><span class="pre">DecisionTreeClassifier</span></code> with
+<code class="docutils literal notranslate"><span class="pre">max_features='auto'</span></code>. We illustrate such changes below.</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">balanced_random_forest</span> <span class="o">=</span> <a href="../../generated/imblearn.ensemble.BalancedBaggingClassifier.html#imblearn.ensemble.BalancedBaggingClassifier" title="View documentation for imblearn.ensemble.BalancedBaggingClassifier"><span class="n">BalancedBaggingClassifier</span></a><span class="p">(</span>
     <span class="n">base_estimator</span><span class="o">=</span><a href="http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier" title="View documentation for sklearn.tree.DecisionTreeClassifier"><span class="n">DecisionTreeClassifier</span></a><span class="p">(</span><span class="n">max_features</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">),</span>
     <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
@@ -347,25 +347,25 @@ random forest by using a <code class="docutils literal"><span class="pre">Decisi
 </div>
 <img alt="../../_images/sphx_glr_plot_comparison_bagging_classifier_003.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot_comparison_bagging_classifier_003.png" />
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-default"><div class="highlight"><pre><span></span><span class="n">Classification</span> <span class="n">results</span> <span class="n">using</span> <span class="n">a</span> <span class="n">balanced</span> <span class="n">random</span> <span class="n">forest</span> <span class="n">classifier</span> <span class="n">on</span> <span class="n">imbalanced</span> <span class="n">data</span>
+<div class="sphx-glr-script-out highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Classification</span> <span class="n">results</span> <span class="n">using</span> <span class="n">a</span> <span class="n">balanced</span> <span class="n">random</span> <span class="n">forest</span> <span class="n">classifier</span> <span class="n">on</span> <span class="n">imbalanced</span> <span class="n">data</span>
                    <span class="n">pre</span>       <span class="n">rec</span>       <span class="n">spe</span>        <span class="n">f1</span>       <span class="n">geo</span>       <span class="n">iba</span>       <span class="n">sup</span>
 
-         <span class="o">-</span><span class="mi">1</span>       <span class="mf">0.99</span>      <span class="mf">0.90</span>      <span class="mf">0.58</span>      <span class="mf">0.94</span>      <span class="mf">0.39</span>      <span class="mf">0.16</span>       <span class="mi">615</span>
-          <span class="mi">1</span>       <span class="mf">0.15</span>      <span class="mf">0.58</span>      <span class="mf">0.90</span>      <span class="mf">0.24</span>      <span class="mf">0.39</span>      <span class="mf">0.14</span>        <span class="mi">19</span>
+         <span class="o">-</span><span class="mi">1</span>       <span class="mf">0.99</span>      <span class="mf">0.90</span>      <span class="mf">0.58</span>      <span class="mf">0.94</span>      <span class="mf">0.72</span>      <span class="mf">0.54</span>       <span class="mi">615</span>
+          <span class="mi">1</span>       <span class="mf">0.15</span>      <span class="mf">0.58</span>      <span class="mf">0.90</span>      <span class="mf">0.24</span>      <span class="mf">0.72</span>      <span class="mf">0.50</span>        <span class="mi">19</span>
 
-<span class="n">avg</span> <span class="o">/</span> <span class="n">total</span>       <span class="mf">0.96</span>      <span class="mf">0.89</span>      <span class="mf">0.59</span>      <span class="mf">0.92</span>      <span class="mf">0.39</span>      <span class="mf">0.16</span>       <span class="mi">634</span>
+<span class="n">avg</span> <span class="o">/</span> <span class="n">total</span>       <span class="mf">0.96</span>      <span class="mf">0.89</span>      <span class="mf">0.59</span>      <span class="mf">0.92</span>      <span class="mf">0.72</span>      <span class="mf">0.54</span>       <span class="mi">634</span>
 
 <span class="n">Confusion</span> <span class="n">matrix</span><span class="p">,</span> <span class="n">without</span> <span class="n">normalization</span>
 <span class="p">[[</span><span class="mi">554</span>  <span class="mi">61</span><span class="p">]</span>
  <span class="p">[</span>  <span class="mi">8</span>  <span class="mi">11</span><span class="p">]]</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the script:</strong> ( 0 minutes  17.232 seconds)</p>
+<p><strong>Total running time of the script:</strong> ( 0 minutes  17.508 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container">
 <div class="sphx-glr-download docutils container">
-<a class="reference download internal" href="../../_downloads/plot_comparison_bagging_classifier.py" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_comparison_bagging_classifier.py</span></code></a></div>
+<a class="reference download internal" href="../../_downloads/plot_comparison_bagging_classifier.py" download=""><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_comparison_bagging_classifier.py</span></code></a></div>
 <div class="sphx-glr-download docutils container">
-<a class="reference download internal" href="../../_downloads/plot_comparison_bagging_classifier.ipynb" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_comparison_bagging_classifier.ipynb</span></code></a></div>
+<a class="reference download internal" href="../../_downloads/plot_comparison_bagging_classifier.ipynb" download=""><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_comparison_bagging_classifier.ipynb</span></code></a></div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
 </div>

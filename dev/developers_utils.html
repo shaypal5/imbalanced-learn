@@ -200,8 +200,8 @@
   <div class="section" id="utilities-for-developers">
 <span id="developers-utils"></span><h1>9. Utilities for Developers<a class="headerlink" href="#utilities-for-developers" title="Permalink to this headline">¶</a></h1>
 <p>Imbalanced-learn contains a number of utilities to help with development. These are
-located in <a class="reference internal" href="api.html#module-imblearn.utils" title="imblearn.utils"><code class="xref py py-mod docutils literal"><span class="pre">imblearn.utils</span></code></a>, and include tools in a number of categories.
-All the following functions and classes are in the module <a class="reference internal" href="api.html#module-imblearn.utils" title="imblearn.utils"><code class="xref py py-mod docutils literal"><span class="pre">imblearn.utils</span></code></a>.</p>
+located in <a class="reference internal" href="api.html#module-imblearn.utils" title="imblearn.utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">imblearn.utils</span></code></a>, and include tools in a number of categories.
+All the following functions and classes are in the module <a class="reference internal" href="api.html#module-imblearn.utils" title="imblearn.utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">imblearn.utils</span></code></a>.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">These utilities are meant to be used internally within the imbalanced-learn
@@ -215,10 +215,10 @@ imbalanced-learn dependencies evolve.</p>
 which accepts arrays, matrices, or sparse matrices as arguments, the following
 should be used when applicable.</p>
 <ul class="simple">
-<li><a class="reference internal" href="generated/imblearn.utils.check_neighbors_object.html#imblearn.utils.check_neighbors_object" title="imblearn.utils.check_neighbors_object"><code class="xref py py-func docutils literal"><span class="pre">check_neighbors_object</span></code></a>: Check the objects is consistent to be a NN.</li>
-<li><code class="xref py py-func docutils literal"><span class="pre">check_target_type</span></code>: Check the target types to be conform to the current samplers.</li>
+<li><a class="reference internal" href="generated/imblearn.utils.check_neighbors_object.html#imblearn.utils.check_neighbors_object" title="imblearn.utils.check_neighbors_object"><code class="xref py py-func docutils literal notranslate"><span class="pre">check_neighbors_object</span></code></a>: Check the objects is consistent to be a NN.</li>
+<li><code class="xref py py-func docutils literal notranslate"><span class="pre">check_target_type</span></code>: Check the target types to be conform to the current samplers.</li>
 <li><dl class="first docutils">
-<dt><a class="reference internal" href="generated/imblearn.utils.check_ratio.html#imblearn.utils.check_ratio" title="imblearn.utils.check_ratio"><code class="xref py py-func docutils literal"><span class="pre">check_ratio</span></code></a>: Checks ratio for consistent type and return a dictionary</dt>
+<dt><a class="reference internal" href="generated/imblearn.utils.check_ratio.html#imblearn.utils.check_ratio" title="imblearn.utils.check_ratio"><code class="xref py py-func docutils literal notranslate"><span class="pre">check_ratio</span></code></a>: Checks ratio for consistent type and return a dictionary</dt>
 <dd>containing each targeted class with its corresponding number of pixel.</dd>
 </dl>
 </li>
@@ -228,16 +228,16 @@ should be used when applicable.</p>
 <h2>9.2. Deprecation<a class="headerlink" href="#deprecation" title="Permalink to this headline">¶</a></h2>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">Apart from <code class="xref py py-func docutils literal"><span class="pre">deprecate_parameter</span></code> the rest of this section is taken from
+<p class="last">Apart from <code class="xref py py-func docutils literal notranslate"><span class="pre">deprecate_parameter</span></code> the rest of this section is taken from
 scikit-learn. Please refer to their original documentation.</p>
 </div>
 <p>If any publicly accessible method, function, attribute or parameter
 is renamed, we still support the old one for two releases and issue
 a deprecation warning when it is called/passed/accessed.
-E.g., if the function <code class="docutils literal"><span class="pre">zero_one</span></code> is renamed to <code class="docutils literal"><span class="pre">zero_one_loss</span></code>,
-we add the decorator <code class="docutils literal"><span class="pre">deprecated</span></code> (from <code class="docutils literal"><span class="pre">sklearn.utils</span></code>)
-to <code class="docutils literal"><span class="pre">zero_one</span></code> and call <code class="docutils literal"><span class="pre">zero_one_loss</span></code> from that function:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">..utils</span> <span class="k">import</span> <span class="n">deprecated</span>
+E.g., if the function <code class="docutils literal notranslate"><span class="pre">zero_one</span></code> is renamed to <code class="docutils literal notranslate"><span class="pre">zero_one_loss</span></code>,
+we add the decorator <code class="docutils literal notranslate"><span class="pre">deprecated</span></code> (from <code class="docutils literal notranslate"><span class="pre">sklearn.utils</span></code>)
+to <code class="docutils literal notranslate"><span class="pre">zero_one</span></code> and call <code class="docutils literal notranslate"><span class="pre">zero_one_loss</span></code> from that function:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">..utils</span> <span class="k">import</span> <span class="n">deprecated</span>
 
 <span class="k">def</span> <span class="nf">zero_one_loss</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
     <span class="c1"># actual implementation</span>
@@ -252,18 +252,18 @@ to <code class="docutils literal"><span class="pre">zero_one</span></code> and c
 </pre></div>
 </div>
 <p>If an attribute is to be deprecated,
-use the decorator <code class="docutils literal"><span class="pre">deprecated</span></code> on a property.
-E.g., renaming an attribute <code class="docutils literal"><span class="pre">labels_</span></code> to <code class="docutils literal"><span class="pre">classes_</span></code> can be done as:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@property</span>
+use the decorator <code class="docutils literal notranslate"><span class="pre">deprecated</span></code> on a property.
+E.g., renaming an attribute <code class="docutils literal notranslate"><span class="pre">labels_</span></code> to <code class="docutils literal notranslate"><span class="pre">classes_</span></code> can be done as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@property</span>
 <span class="nd">@deprecated</span><span class="p">(</span><span class="s2">&quot;Attribute labels_ was deprecated in version 0.13 and &quot;</span>
             <span class="s2">&quot;will be removed in 0.15. Use &#39;classes_&#39; instead&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">labels_</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">classes_</span>
 </pre></div>
 </div>
-<p>If a parameter has to be deprecated, use <code class="docutils literal"><span class="pre">DeprecationWarning</span></code> appropriately.
+<p>If a parameter has to be deprecated, use <code class="docutils literal notranslate"><span class="pre">DeprecationWarning</span></code> appropriately.
 In the following example, k is deprecated and renamed to n_clusters:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
 
 <span class="k">def</span> <span class="nf">example_function</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">k</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -281,14 +281,14 @@ in version 0.18-dev, the message should say it happened in version 0.18
 and the old behavior will be removed in version 0.20.</p>
 <p>In addition, a deprecation note should be added in the docstring, recalling the
 same information as the deprecation warning as explained above. Use the
-<code class="docutils literal"><span class="pre">..</span> <span class="pre">deprecated::</span></code> directive:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>.. deprecated:: 0.13
+<code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">deprecated::</span></code> directive:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. deprecated:: 0.13
    ``k`` was renamed to ``n_clusters`` in version 0.13 and will be removed
    in 0.15.
 </pre></div>
 </div>
 <p>On the top of all the functionality provided by scikit-learn. imbalanced-learn
-provides <code class="xref py py-func docutils literal"><span class="pre">deprecate_parameter</span></code>: which is used to deprecate a sampler’s
+provides <code class="xref py py-func docutils literal notranslate"><span class="pre">deprecate_parameter</span></code>: which is used to deprecate a sampler’s
 parameter (attribute) by another one.</p>
 </div>
 <div class="section" id="testing-utilities">
@@ -298,7 +298,7 @@ is going to be merge in pytest and will be removed when the pytest release will
 have it.</p>
 <p>If using Python 2.7 or above, you may use this function as a
 context manager:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">warnings</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">warnings</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">imblearn.utils.testing</span> <span class="k">import</span> <span class="n">warns</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">warns</span><span class="p">(</span><span class="ne">RuntimeWarning</span><span class="p">):</span>
 <span class="gp">... </span>   <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;my runtime warning&quot;</span><span class="p">,</span> <span class="ne">RuntimeWarning</span><span class="p">)</span>
@@ -316,9 +316,9 @@ context manager:</p>
 <span class="gr">Failed</span>: <span class="n">DID NOT WARN. No warnings of type ...RuntimeWarning... was emitted...</span>
 </pre></div>
 </div>
-<p>In the context manager form you may use the keyword argument <code class="docutils literal"><span class="pre">match</span></code> to assert
+<p>In the context manager form you may use the keyword argument <code class="docutils literal notranslate"><span class="pre">match</span></code> to assert
 that the exception matches a text or regex:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">warnings</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">warnings</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">imblearn.utils.testing</span> <span class="k">import</span> <span class="n">warns</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">warns</span><span class="p">(</span><span class="ne">UserWarning</span><span class="p">,</span> <span class="n">match</span><span class="o">=</span><span class="s1">&#39;must be 0 or None&#39;</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;value must be 0 or None&quot;</span><span class="p">,</span> <span class="ne">UserWarning</span><span class="p">)</span>

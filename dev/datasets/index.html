@@ -198,13 +198,13 @@
             
   <div class="section" id="dataset-loading-utilities">
 <span id="datasets"></span><h1>8. Dataset loading utilities<a class="headerlink" href="#dataset-loading-utilities" title="Permalink to this headline">¶</a></h1>
-<p>The <code class="docutils literal"><span class="pre">imblearn.datasets</span></code> package is complementing the <code class="docutils literal"><span class="pre">sklearn.datasets</span></code>
+<p>The <code class="docutils literal notranslate"><span class="pre">imblearn.datasets</span></code> package is complementing the <code class="docutils literal notranslate"><span class="pre">sklearn.datasets</span></code>
 package. The package provides both: (i) a set of imbalanced datasets to perform
 systematic benchmark and (ii) a utility to create an imbalanced dataset from an
 original balanced dataset.</p>
 <div class="section" id="imbalanced-datasets-for-benchmark">
 <span id="zenodo"></span><h2>8.1. Imbalanced datasets for benchmark<a class="headerlink" href="#imbalanced-datasets-for-benchmark" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference internal" href="../generated/imblearn.datasets.fetch_datasets.html#imblearn.datasets.fetch_datasets" title="imblearn.datasets.fetch_datasets"><code class="xref py py-func docutils literal"><span class="pre">fetch_datasets</span></code></a> allows to fetch 27 datasets which are imbalanced and
+<p><a class="reference internal" href="../generated/imblearn.datasets.fetch_datasets.html#imblearn.datasets.fetch_datasets" title="imblearn.datasets.fetch_datasets"><code class="xref py py-func docutils literal notranslate"><span class="pre">fetch_datasets</span></code></a> allows to fetch 27 datasets which are imbalanced and
 binarized. The following data sets are available:</p>
 <blockquote>
 <div><table border="1" class="docutils">
@@ -419,7 +419,7 @@ binarized. The following data sets are available:</p>
 </table>
 </div></blockquote>
 <p>A specific data set can be selected as:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">Counter</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">Counter</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">imblearn.datasets</span> <span class="k">import</span> <span class="n">fetch_datasets</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ecoli</span> <span class="o">=</span> <span class="n">fetch_datasets</span><span class="p">()[</span><span class="s1">&#39;ecoli&#39;</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ecoli</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span>
@@ -431,12 +431,12 @@ binarized. The following data sets are available:</p>
 </div>
 <div class="section" id="imbalanced-generator">
 <span id="make-imbalanced"></span><h2>8.2. Imbalanced generator<a class="headerlink" href="#imbalanced-generator" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference internal" href="../generated/imblearn.datasets.make_imbalance.html#imblearn.datasets.make_imbalance" title="imblearn.datasets.make_imbalance"><code class="xref py py-func docutils literal"><span class="pre">make_imbalance</span></code></a> turns an original dataset into an imbalanced
-dataset. This behaviour is driven by the parameter <code class="docutils literal"><span class="pre">ratio</span></code> which behave
-similarly to other resampling algorithm. <code class="docutils literal"><span class="pre">ratio</span></code> can be given as a dictionary
+<p><a class="reference internal" href="../generated/imblearn.datasets.make_imbalance.html#imblearn.datasets.make_imbalance" title="imblearn.datasets.make_imbalance"><code class="xref py py-func docutils literal notranslate"><span class="pre">make_imbalance</span></code></a> turns an original dataset into an imbalanced
+dataset. This behaviour is driven by the parameter <code class="docutils literal notranslate"><span class="pre">ratio</span></code> which behave
+similarly to other resampling algorithm. <code class="docutils literal notranslate"><span class="pre">ratio</span></code> can be given as a dictionary
 where the key corresponds to the class and the value is the the number of
 samples in the class:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="k">import</span> <span class="n">load_iris</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="k">import</span> <span class="n">load_iris</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">imblearn.datasets</span> <span class="k">import</span> <span class="n">make_imbalance</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">iris</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ratio</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">40</span><span class="p">}</span>
@@ -447,15 +447,15 @@ samples in the class:</p>
 </div>
 <p>Note that all samples of a class are passed-through if the class is not mentioned
 in the dictionary:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ratio</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="mi">10</span><span class="p">}</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ratio</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="mi">10</span><span class="p">}</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">X_imb</span><span class="p">,</span> <span class="n">y_imb</span> <span class="o">=</span> <span class="n">make_imbalance</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">iris</span><span class="o">.</span><span class="n">target</span><span class="p">,</span> <span class="n">ratio</span><span class="o">=</span><span class="n">ratio</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="n">Counter</span><span class="p">(</span><span class="n">y_imb</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
 <span class="go">[(0, 10), (1, 50), (2, 50)]</span>
 </pre></div>
 </div>
 <p>Instead of a dictionary, a function can be defined and directly pass to
-<code class="docutils literal"><span class="pre">ratio</span></code>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">ratio_multiplier</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+<code class="docutils literal notranslate"><span class="pre">ratio</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">ratio_multiplier</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="n">multiplier</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mf">0.95</span><span class="p">}</span>
 <span class="gp">... </span>    <span class="n">target_stats</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 <span class="gp">... </span>    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">target_stats</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
