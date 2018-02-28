@@ -48,10 +48,10 @@ the current scikit-learn pipeline.
 
                  precision    recall  f1-score   support
 
-              0       0.85      1.00      0.92        50
-              1       1.00      0.82      0.90        50
+              0       0.86      1.00      0.93        50
+              1       1.00      0.84      0.91        50
 
-    avg / total       0.92      0.91      0.91       100
+    avg / total       0.93      0.92      0.92       100
 
 
 
@@ -139,7 +139,7 @@ the current scikit-learn pipeline.
 
     plt.show()
 
-**Total running time of the script:** ( 0 minutes  0.725 seconds)
+**Total running time of the script:** ( 0 minutes  0.705 seconds)
 
 
 
