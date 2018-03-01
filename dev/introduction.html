@@ -202,20 +202,17 @@
 <span id="api-imblearn"></span><h2>1.1. API’s of imbalanced-learn samplers<a class="headerlink" href="#api-s-of-imbalanced-learn-samplers" title="Permalink to this headline">¶</a></h2>
 <p>The available samplers follows the scikit-learn API using the base estimator
 and adding a sampling functionality through the <code class="docutils literal notranslate"><span class="pre">sample</span></code> method:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">:</span><span class="n">Estimator</span><span class="p">:</span>
-</pre></div>
-</div>
-<blockquote>
-<div><p>The base object, implements a <code class="docutils literal notranslate"><span class="pre">fit</span></code> method to learn from data, either:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">estimator</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">targets</span><span class="p">)</span>
-</pre></div>
-</div>
-</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Sampler:</th><td class="field-body"><p class="first">To resample a data sets, each sampler implements:</p>
+<tr class="field-odd field"><th class="field-name">Estimator:</th><td class="field-body"><p class="first">The base object, implements a <code class="docutils literal notranslate"><span class="pre">fit</span></code> method to learn from data, either:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">estimator</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">targets</span><span class="p">)</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Sampler:</th><td class="field-body"><p class="first">To resample a data sets, each sampler implements:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">data_resampled</span><span class="p">,</span> <span class="n">targets_resampled</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">targets</span><span class="p">)</span>
 </pre></div>
 </div>
