@@ -194,7 +194,7 @@
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">cross_val_predict</span>
 
 <span class="kn">from</span> <span class="nn">.base</span> <span class="k">import</span> <span class="n">BaseEnsembleSampler</span>
-<span class="kn">from</span> <span class="nn">..utils</span> <span class="k">import</span> <span class="n">check_ratio</span>
+<span class="kn">from</span> <span class="nn">..utils</span> <span class="k">import</span> <span class="n">check_ratio</span><span class="p">,</span> <span class="n">check_target_type</span>
 
 
 <div class="viewcode-block" id="BalanceCascade"><a class="viewcode-back" href="../../../generated/imblearn.ensemble.BalanceCascade.html#imblearn.ensemble.BalanceCascade">[docs]</a><span class="k">class</span> <span class="nc">BalanceCascade</span><span class="p">(</span><span class="n">BaseEnsembleSampler</span><span class="p">):</span>
@@ -317,6 +317,7 @@
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">BalanceCascade</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">check_target_type</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ratio_</span> <span class="o">=</span> <span class="n">check_ratio</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ratio</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;under-sampling&#39;</span><span class="p">)</span></div>
         <span class="k">return</span> <span class="bp">self</span>
 
