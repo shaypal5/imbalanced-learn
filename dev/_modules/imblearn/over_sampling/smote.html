@@ -241,7 +241,7 @@
 <span class="sd">        :class:`sklearn.neighbors.base.KNeighborsMixin` that will be used to</span>
 <span class="sd">        find the k_neighbors.</span>
 
-<span class="sd">    m_neighbors : int int or object, optional (default=10)</span>
+<span class="sd">    m_neighbors : int or object, optional (default=10)</span>
 <span class="sd">        If int, number of nearest neighbours to use to determine if a minority</span>
 <span class="sd">        sample is in danger. Used with ``kind={&#39;borderline1&#39;, &#39;borderline2&#39;,</span>
 <span class="sd">        &#39;svm&#39;}``.  If object, an estimator that inherits</span>
@@ -329,8 +329,8 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">k_neighbors</span> <span class="o">=</span> <span class="n">k_neighbors</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">m_neighbors</span> <span class="o">=</span> <span class="n">m_neighbors</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">out_step</span> <span class="o">=</span> <span class="n">out_step</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">svm_estimator</span> <span class="o">=</span> <span class="n">svm_estimator</span></div>
-        <span class="bp">self</span><span class="o">.</span><span class="n">n_jobs</span> <span class="o">=</span> <span class="n">n_jobs</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">svm_estimator</span> <span class="o">=</span> <span class="n">svm_estimator</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_jobs</span> <span class="o">=</span> <span class="n">n_jobs</span></div>
 
     <span class="k">def</span> <span class="nf">_in_danger_noise</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">samples</span><span class="p">,</span> <span class="n">target_class</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;danger&#39;</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Estimate if a set of sample are in danger or noise.</span>
@@ -749,8 +749,8 @@
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sample_regular</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
         <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">kind</span> <span class="o">==</span> <span class="s1">&#39;borderline1&#39;</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">kind</span> <span class="o">==</span> <span class="s1">&#39;borderline2&#39;</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sample_borderline</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">kind</span> <span class="o">==</span> <span class="s1">&#39;svm&#39;</span><span class="p">:</span></div>
-            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sample_svm</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">kind</span> <span class="o">==</span> <span class="s1">&#39;svm&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sample_svm</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span></div>
 </pre></div>
 
            </div>

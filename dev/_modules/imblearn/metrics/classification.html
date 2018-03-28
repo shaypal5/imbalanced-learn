@@ -441,8 +441,8 @@
         <span class="n">specificity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">specificity</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="n">weights</span><span class="p">)</span>
         <span class="n">sensitivity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">sensitivity</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="n">weights</span><span class="p">)</span>
         <span class="n">true_sum</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># return no support</span>
-</div>
-    <span class="k">return</span> <span class="n">sensitivity</span><span class="p">,</span> <span class="n">specificity</span><span class="p">,</span> <span class="n">true_sum</span>
+
+    <span class="k">return</span> <span class="n">sensitivity</span><span class="p">,</span> <span class="n">specificity</span><span class="p">,</span> <span class="n">true_sum</span></div>
 
 
 <div class="viewcode-block" id="sensitivity_score"><a class="viewcode-back" href="../../../generated/imblearn.metrics.sensitivity_score.html#imblearn.metrics.sensitivity_score">[docs]</a><span class="k">def</span> <span class="nf">sensitivity_score</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span>
@@ -541,8 +541,8 @@
         <span class="n">average</span><span class="o">=</span><span class="n">average</span><span class="p">,</span>
         <span class="n">warn_for</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;sensitivity&#39;</span><span class="p">,</span> <span class="p">),</span>
         <span class="n">sample_weight</span><span class="o">=</span><span class="n">sample_weight</span><span class="p">)</span>
-</div>
-    <span class="k">return</span> <span class="n">s</span>
+
+    <span class="k">return</span> <span class="n">s</span></div>
 
 
 <div class="viewcode-block" id="specificity_score"><a class="viewcode-back" href="../../../generated/imblearn.metrics.specificity_score.html#imblearn.metrics.specificity_score">[docs]</a><span class="k">def</span> <span class="nf">specificity_score</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span>
@@ -642,8 +642,8 @@
         <span class="n">average</span><span class="o">=</span><span class="n">average</span><span class="p">,</span>
         <span class="n">warn_for</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;specificity&#39;</span><span class="p">,</span> <span class="p">),</span>
         <span class="n">sample_weight</span><span class="o">=</span><span class="n">sample_weight</span><span class="p">)</span>
-</div>
-    <span class="k">return</span> <span class="n">s</span>
+
+    <span class="k">return</span> <span class="n">s</span></div>
 
 
 <div class="viewcode-block" id="geometric_mean_score"><a class="viewcode-back" href="../../../generated/imblearn.metrics.geometric_mean_score.html#imblearn.metrics.geometric_mean_score">[docs]</a><span class="k">def</span> <span class="nf">geometric_mean_score</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span>
@@ -822,8 +822,8 @@
         <span class="n">gmean</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">gmean</span><span class="p">(</span><span class="n">recall</span><span class="p">)</span>
         <span class="c1"># old version of scipy return MaskedConstant instead of 0.0</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">gmean</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ma</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">MaskedConstant</span><span class="p">):</span>
-            <span class="k">return</span> <span class="mf">0.0</span></div>
-        <span class="k">return</span> <span class="n">gmean</span>
+            <span class="k">return</span> <span class="mf">0.0</span>
+        <span class="k">return</span> <span class="n">gmean</span></div>
 
 
 <div class="viewcode-block" id="make_index_balanced_accuracy"><a class="viewcode-back" href="../../../generated/imblearn.metrics.make_index_balanced_accuracy.html#imblearn.metrics.make_index_balanced_accuracy">[docs]</a><span class="k">def</span> <span class="nf">make_index_balanced_accuracy</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">squared</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
@@ -929,8 +929,8 @@
             <span class="k">return</span> <span class="p">(</span><span class="mf">1.</span> <span class="o">+</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">dom</span><span class="p">)</span> <span class="o">*</span> <span class="n">_score</span>
 
         <span class="k">return</span> <span class="n">compute_score</span>
-</div>
-    <span class="k">return</span> <span class="n">decorate</span>
+
+    <span class="k">return</span> <span class="n">decorate</span></div>
 
 
 <div class="viewcode-block" id="classification_report_imbalanced"><a class="viewcode-back" href="../../../generated/imblearn.metrics.classification_report_imbalanced.html#imblearn.metrics.classification_report_imbalanced">[docs]</a><span class="k">def</span> <span class="nf">classification_report_imbalanced</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span>
@@ -1083,8 +1083,8 @@
                                 <span class="n">iba</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="n">support</span><span class="p">)):</span>
         <span class="n">values</span> <span class="o">+=</span> <span class="p">[</span><span class="s2">&quot;{0:0.</span><span class="si">{1}</span><span class="s2">f}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">digits</span><span class="p">)]</span>
     <span class="n">values</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;</span><span class="si">{0}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">support</span><span class="p">))]</span>
-    <span class="n">report</span> <span class="o">+=</span> <span class="n">fmt</span> <span class="o">%</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">values</span><span class="p">)</span></div>
-    <span class="k">return</span> <span class="n">report</span>
+    <span class="n">report</span> <span class="o">+=</span> <span class="n">fmt</span> <span class="o">%</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">report</span></div>
 </pre></div>
 
            </div>
