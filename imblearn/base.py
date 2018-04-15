@@ -59,7 +59,7 @@ class SamplerMixin(six.with_metaclass(ABCMeta, BaseEstimator)):
         """
         # Check the consistency of X and y
         y, binarize_y = check_target_type(y, indicate_one_vs_all=True)
-        X, y = check_X_y(X, y, accept_sparse=['csr', 'csc'])
+        X, y = check_X_y(X, y, accept_sparse=['csr', 'csc'], dtype=None)
 
         check_is_fitted(self, 'ratio_')
         self._check_X_y(X, y)
@@ -165,7 +165,7 @@ class BaseSampler(SamplerMixin):
 
         """
         y = check_target_type(y)
-        X, y = check_X_y(X, y, accept_sparse=['csr', 'csc'])
+        X, y = check_X_y(X, y, accept_sparse=['csr', 'csc'], dtype=None)
         self.X_hash_, self.y_hash_ = hash_X_y(X, y)
         # self.sampling_type is already checked in check_ratio
         self.ratio_ = check_ratio(self.ratio, y, self._sampling_type)
